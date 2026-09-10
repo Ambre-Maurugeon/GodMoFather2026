@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: CardDatas
   m_EditorClassIdentifier: Assembly-CSharp::CardDatabase
   datas:
-  - CardName: 
+  - CardName: qsdzeu
     id: 0
-    CardType: 0
+    CardType: 1
     CardNumber: 0
     Color: 0
     Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

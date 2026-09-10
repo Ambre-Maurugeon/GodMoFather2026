@@ -15,6 +15,16 @@ public enum CARD_COLOR
     BLACK = 2,
 }
 
+public enum GameState
+{
+    INNIT,
+    Player1,
+    Player2,
+    AngryPhase,
+    Victory,
+    Defeat
+}
+
 public enum COMBO
 {
     NONE = 0,
