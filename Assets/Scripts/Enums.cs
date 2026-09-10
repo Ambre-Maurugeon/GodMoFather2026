@@ -4,7 +4,8 @@ public enum CARD_TYPE
     SPADE = 1,
     DIAMOND = 2,
     HEART = 3,
-    CLUB = 4
+    CLUB = 4,
+    OUDLER = 5,
 }
 
 public enum CARD_COLOR
@@ -22,4 +23,14 @@ public enum GameState
     AngryPhase,
     Victory,
     Defeat
+}
+
+public enum COMBO
+{
+    NONE = 0,
+    JACK = 1,
+    KNIGHT = 2,
+    QUEEN = 3,
+    KING = 4,
+    OUDLER = 5,
 }

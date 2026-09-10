@@ -13,27 +13,141 @@ MonoBehaviour:
   m_Name: CardDatas
   m_EditorClassIdentifier: Assembly-CSharp::CardDatabase
   datas:
-  - CardName: qsdzeu
+  - CardName: Default_Card
     id: 0
     CardType: 1
-    CardNumber: 0
-    Color: 0
+    CardNumber: 10
+    Color: 2
     Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - CardName: 
+  - CardName: Default_Card
     id: 1
-    CardType: 0
-    CardNumber: 0
-    Color: 0
+    CardType: 2
+    CardNumber: 10
+    Color: 1
     Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  - CardName: 
+  - CardName: Default_Card
     id: 2
-    CardType: 0
-    CardNumber: 0
-    Color: 0
+    CardType: 3
+    CardNumber: 10
+    Color: 1
     Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  - CardName: 
+  - CardName: Default_Card
     id: 3
-    CardType: 0
-    CardNumber: 0
+    CardType: 4
+    CardNumber: 10
+    Color: 2
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Valet
+    id: 4
+    CardType: 4
+    CardNumber: 20
+    Color: 2
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Valet
+    id: 5
+    CardType: 1
+    CardNumber: 20
+    Color: 2
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Valet
+    id: 6
+    CardType: 2
+    CardNumber: 20
+    Color: 1
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Valet
+    id: 7
+    CardType: 3
+    CardNumber: 20
+    Color: 1
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Cavalier
+    id: 8
+    CardType: 1
+    CardNumber: 30
+    Color: 2
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Cavalier
+    id: 9
+    CardType: 2
+    CardNumber: 30
+    Color: 1
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Cavalier
+    id: 10
+    CardType: 3
+    CardNumber: 30
+    Color: 1
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Cavalier
+    id: 11
+    CardType: 4
+    CardNumber: 30
+    Color: 2
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Dame
+    id: 12
+    CardType: 1
+    CardNumber: 40
+    Color: 2
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Dame
+    id: 13
+    CardType: 2
+    CardNumber: 40
+    Color: 1
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Dame
+    id: 14
+    CardType: 3
+    CardNumber: 40
+    Color: 1
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Dame
+    id: 15
+    CardType: 4
+    CardNumber: 40
+    Color: 2
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Roi
+    id: 16
+    CardType: 1
+    CardNumber: 50
+    Color: 2
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Roi
+    id: 17
+    CardType: 2
+    CardNumber: 50
+    Color: 1
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Roi
+    id: 18
+    CardType: 3
+    CardNumber: 50
+    Color: 1
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Roi
+    id: 19
+    CardType: 4
+    CardNumber: 50
+    Color: 2
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: 1
+    id: 20
+    CardType: 5
+    CardNumber: 2
+    Color: 0
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: 21
+    id: 21
+    CardType: 5
+    CardNumber: 4
+    Color: 0
+    Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - CardName: Excuse
+    id: 22
+    CardType: 5
+    CardNumber: 8
     Color: 0
     Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}

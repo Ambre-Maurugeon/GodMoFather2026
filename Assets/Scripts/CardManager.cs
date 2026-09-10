@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using NaughtyAttributes;
-using NUnit.Framework;
 using UnityEngine;
 
 public class CardManager : MonoBehaviour
@@ -20,7 +19,18 @@ public class CardManager : MonoBehaviour
 
     #region Fields
 
-    private List<CardData> deck = new List<CardData>();
+    [SerializeField] private int _deckCount = 10;
+
+    private List<CardData> _deck = new List<CardData>();
+
+    // Sorted cards
+    private List<CardData> _basics = new List<CardData>();
+    private List<CardData> _jacks = new List<CardData>();
+    private List<CardData> _knights = new List<CardData>();
+    private List<CardData> _queens = new List<CardData>();
+    private List<CardData> _kings = new List<CardData>();   
+    private List<CardData> _oudlers = new List<CardData>();
+
 
     #endregion
 
@@ -35,13 +45,51 @@ public class CardManager : MonoBehaviour
         }
         else
             _instance = this;
+
     }
 
     private void Start()
     {
-
+        // Sort Cards at init
+        SortCardsByType();
     }
     #endregion
+
+
+    private void SortCardsByType()
+    {
+        foreach (var card in _dbMgr.Cards)
+        {
+            // oudler
+            if (card.CardType == CARD_TYPE.OUDLER)
+            {
+                _oudlers.Add(card);
+                continue;
+            }
+
+            // others
+            switch (card.CardNumber)
+            {
+                case 14: // KING
+                    _kings.Add(card);
+                    break;
+                case 13: // QUEEN
+                    _queens.Add(card);
+                    break;
+                case 12: // KNIGHT
+                    _knights.Add(card);
+                    break;
+                case 11: // JACK
+                    _jacks.Add(card);
+                    break;
+
+                default: // BASIC
+                    _basics.Add(card);
+                    break;
+
+            }
+        }
+    }
 
     [Button]
     public void CreateDeck()
@@ -49,29 +97,69 @@ public class CardManager : MonoBehaviour
         ClearDeck();
 
         // fill deck
-        List<CardData> drawPile = new List<CardData>(_dbMgr.Cards);
-
-        while (drawPile.Count > 0)
+        for(int i = 0; i < _deckCount; i++)
         {
             // get rd
-            int rd = Random.Range(0, drawPile.Count);
-            CardData rdCard = drawPile[rd];
+            CardData rdCard = GetRandomCard();
 
             // add rd
-            deck.Add(rdCard);
+            _deck.Add(rdCard);
             CardController controller = Instantiate(_cardPref, _deckParent.transform).GetComponent<CardController>();
             controller.UpdateCardInfo(rdCard);
 
-            // update pile
-            drawPile.RemoveAt(rd);
         }
+
 
     }
 
+    private CardData GetRandomCard()
+    {
+        CardData rdCard;
+        int r = Random.Range(0, 100);
+
+        if (r < 5 && _oudlers.Count!=0)
+        // rd ds oudler
+        {
+            int rd = Random.Range(0, _oudlers.Count);
+            rdCard = _oudlers[rd];
+        }
+        else if (r < 15 && _knights.Count != 0)
+        // rd ds knights
+        {
+            int rd = Random.Range(0, _knights.Count);
+            rdCard = _knights[rd];
+        }
+        else if (r < 25 && _queens.Count != 0)
+        // rd ds queens
+        {
+            int rd = Random.Range(0, _queens.Count);
+            rdCard = _queens[rd];
+        }
+        else if (r < 35 && _kings.Count != 0)
+        // rd ds kings
+        {
+            int rd = Random.Range(0, _kings.Count);
+            rdCard = _kings[rd];
+        }
+        else if (r < 55 && _jacks.Count != 0)
+        // rd ds jacks
+        {
+            int rd = Random.Range(0, _jacks.Count);
+            rdCard = _jacks[rd];
+        }
+        else
+        // rd ds basics
+        {
+            int rd = Random.Range(0, _basics.Count);
+            rdCard = _basics[rd];
+        }
+
+        return rdCard;
+    }
 
     public void ClearDeck()
     {
-        deck.Clear();
+       _deck.Clear();
 
         foreach (Transform child in _deckParent.transform)
             Destroy(child.gameObject);

@@ -9,5 +9,6 @@ public class CardData
     public int CardNumber;
     public CARD_COLOR Color;
     public Sprite Sprite;
+    public float Drop;
 
 }
