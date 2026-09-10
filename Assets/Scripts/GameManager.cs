@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,7 +23,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreGoalText;
     [SerializeField] private TextMeshProUGUI angryMeterText;
     [SerializeField] private TextMeshProUGUI diceResultText;
-
+    [Header("Colors")]
+    [SerializeField] private GameObject iconPlayer1;
+    [SerializeField] private GameObject iconPlayer2;
+    [SerializeField] private Color myTurnColor;
+    [SerializeField] private Color afkColor;
 
     public void Start()
     {
@@ -48,11 +53,11 @@ public class GameManager : MonoBehaviour
                 Debug.Log($"Winner is {winner}");
             }
 
-            if (_isPlayer1Turn)
+            if (_isPlayer1Turn && !_isPlayer2Turn)
             {
                 // PlayTurn();
             }
-            else if (_isPlayer2Turn)
+            else if (_isPlayer2Turn && !_isPlayer1Turn)
             {
                 // PlayTurn();
             }
@@ -86,18 +91,26 @@ public class GameManager : MonoBehaviour
             case 0:
                 _isPlayer1Turn = false;
                 _isPlayer2Turn = false;
+                iconPlayer1.GetComponent<Image>().color = afkColor;
+                iconPlayer2.GetComponent<Image>().color = afkColor;
                 break;
             case 1:
                 _isPlayer1Turn = true;
                 _isPlayer2Turn = false;
+                iconPlayer1.GetComponent<Image>().color = myTurnColor;
+                iconPlayer2.GetComponent<Image>().color = afkColor;
                 break;
             case 2:
                 _isPlayer1Turn = false;
                 _isPlayer2Turn = true;
+                iconPlayer1.GetComponent<Image>().color = afkColor;
+                iconPlayer2.GetComponent<Image>().color = myTurnColor;
                 break;
             default:
                 _isPlayer1Turn = true;
                 _isPlayer2Turn = false;
+                iconPlayer1.GetComponent<Image>().color = myTurnColor;
+                iconPlayer2.GetComponent<Image>().color = afkColor;
                 Debug.Log($"{changeTo} is not valid");
                 break;
         }
