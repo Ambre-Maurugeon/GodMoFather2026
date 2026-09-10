@@ -4,7 +4,8 @@ public enum CARD_TYPE
     SPADE = 1,
     DIAMOND = 2,
     HEART = 3,
-    CLUB = 4
+    CLUB = 4,
+    TRUMP = 5,
 }
 
 public enum CARD_COLOR
@@ -12,4 +13,14 @@ public enum CARD_COLOR
     NONE = 0,
     RED = 1,
     BLACK = 2,
+}
+
+public enum COMBO
+{
+    NONE = 0,
+    JACK = 1,
+    KNIGHT = 2,
+    QUEEN = 3,
+    KING = 4,
+    TRUMP = 5,
 }
