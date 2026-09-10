@@ -5,7 +5,7 @@ public enum CARD_TYPE
     DIAMOND = 2,
     HEART = 3,
     CLUB = 4,
-    TRUMP = 5,
+    OUDLER = 5,
 }
 
 public enum CARD_COLOR
