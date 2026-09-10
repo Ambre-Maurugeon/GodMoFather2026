@@ -22,5 +22,5 @@ public enum COMBO
     KNIGHT = 2,
     QUEEN = 3,
     KING = 4,
-    TRUMP = 5,
+    OUDLER = 5,
 }
