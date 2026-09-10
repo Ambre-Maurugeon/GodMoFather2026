@@ -74,9 +74,9 @@ public class GameManager : MonoBehaviour
             ChangePlayerTurn(1);
             Debug.Log($"Player 1 got 100 scores {_player2Score}");
         }
-        MonsterAngryMeterDice(_monsterAngryMeter);
         _monsterAngryMeter++;
         monsterAngryMeter.SetMeter(_monsterAngryMeter);
+        MonsterAngryMeterDice(_monsterAngryMeter);
         UpdateText();
     }
     void ChangePlayerTurn(int changeTo)
@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
         if (hasSix7)
         {
             Debug.Log("Prepare to dodge !");
-            _monsterAngryMeter = -1;
+            _monsterAngryMeter = 0;
             dodgeGame.StartGame();
         }
         if (diceResultText != null)
