@@ -5,23 +5,28 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     private bool isGameOn = false;
-    private int angryMeter = 0;
+    private int _monsterAngryMeter = 0;
+    [SerializeField] private DodgeGame dodgeGame;
     [Header("SCORE")]
     [SerializeField] private int _player1Score = 0;
     [SerializeField] private int _player2Score = 0;
     private bool _isPlayer1Turn = false;
     private bool _isPlayer2Turn = false;
-    [SerializeField] private int _scoreGoal = 1000;
+    [SerializeField] private int _scoreGoal = 1000; //1k
 
     [Header("Text Link")]
     [SerializeField] private TextMeshProUGUI currentTurnText;
     [SerializeField] private TextMeshProUGUI player1ScoreText;
     [SerializeField] private TextMeshProUGUI player2ScoreText;
     [SerializeField] private TextMeshProUGUI scoreGoalText;
+    [SerializeField] private TextMeshProUGUI angryMeterText;
+    [SerializeField] private TextMeshProUGUI diceResultText;
 
 
     public void Start()
     {
+        dodgeGame = FindFirstObjectByType<DodgeGame>();
+
         isGameOn = true;
         _isPlayer1Turn = true;
         _isPlayer2Turn = false;
@@ -67,6 +72,8 @@ public class GameManager : MonoBehaviour
             ChangePlayerTurn(1);
             Debug.Log($"Player 1 got 100 scores {_player2Score}");
         }
+        MonsterAngryMeter(_monsterAngryMeter);
+        _monsterAngryMeter++;
         UpdateText();
     }
     void ChangePlayerTurn(int changeTo)
@@ -92,11 +99,43 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+    int[] MonsterAngryMeter(int multiplier)
+    {
+        if (multiplier <= 0) return new int[0];
+        int[] results = new int[multiplier];
+        bool hasSix7 = false;
+
+        for (int i = 0; i < multiplier; i++)
+        {
+            results[i] = Random.Range(1, 7);
+
+            if (results[i] == 6)
+            {
+                hasSix7 = true;
+            }
+        }
+
+        if (hasSix7)
+        {
+            Debug.Log("Prepare to dodge !");
+            _monsterAngryMeter = 0;
+            dodgeGame.UIAway();
+            dodgeGame.StartGame();
+        }
+        if (diceResultText != null)
+            diceResultText.text = "Dice roll : " + string.Join(", ", results);
+        return results;
+    }
     void UpdateText()
     {
-        scoreGoalText.text = $"Goal {_scoreGoal}";
-        player1ScoreText.text = $"Player 1's score : {_player1Score}";
-        player2ScoreText.text = $"Player 2's score : {_player2Score}";
+        if (scoreGoalText != null)
+            scoreGoalText.text = $"Goal {_scoreGoal}";
+        if (player1ScoreText != null)
+            player1ScoreText.text = $"Player 1's score : {_player1Score}";
+        if (player2ScoreText != null)
+            player2ScoreText.text = $"Player 2's score : {_player2Score}";
+        if (angryMeterText != null)
+            angryMeterText.text = $"Monster's angry meter : {_monsterAngryMeter}";
 
         // Player's turn
         if (_isPlayer1Turn && !_isPlayer2Turn)

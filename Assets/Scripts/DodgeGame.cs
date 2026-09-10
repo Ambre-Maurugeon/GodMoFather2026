@@ -15,6 +15,7 @@ public class DodgeGame : MonoBehaviour
     [SerializeField] private float minPos = -5f;
     [SerializeField] private float maxPos = 5f;
     [SerializeField] private float playerSpeedPerTile = 5f;
+    [SerializeField] private float eventDuration = 15f;
 
     [Header("Cards")]
     [SerializeField] private GameObject cardPrefab;
@@ -22,7 +23,7 @@ public class DodgeGame : MonoBehaviour
     [SerializeField] private float cardPerSecond = 0.55f;
     [SerializeField] private int minCardPosSpawn = -3;
     [SerializeField] private int maxCardPosSpawn = 3;
-    [SerializeField] private int spawnY = 6;
+    [SerializeField] private int spawnY = 10;
     [SerializeField] private int despawnY = -6;
     [Header("Score")]
     [SerializeField] private int damagePerHit = 30;
@@ -31,8 +32,6 @@ public class DodgeGame : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(MoveDeck(_moveDistance, _moveDuration));
-        StartGame();
     }
 
     void Update()
@@ -47,6 +46,33 @@ public class DodgeGame : MonoBehaviour
     {
         _isGameRunning = true;
         StartCoroutine(SpawnCardsRoutine());
+        StartCoroutine(GameTimerRoutine());
+    }
+
+    public void StopGame()
+    {
+        _isGameRunning = false;
+        StopAllCoroutines();
+        ClearCards();
+        Debug.Log("Game Over: Event Finished!");
+    }
+
+    private IEnumerator GameTimerRoutine()
+    {
+        // Wait for the duration of the event
+        yield return new WaitForSeconds(eventDuration);
+        StopGame();
+    }
+
+    private void ClearCards()
+    {
+        // Destroy remaining active cards
+        for (int i = 0; i < _activeCards.Count; i++)
+        {
+            if (_activeCards[i] != null)
+                Destroy(_activeCards[i]);
+        }
+        _activeCards.Clear();
     }
 
     private void HandlePlayerMovement()
@@ -69,7 +95,6 @@ public class DodgeGame : MonoBehaviour
 
     private void HandleCardsMovement()
     {
-        // Iterate backwards to allow safe removal while looping
         for (int i = _activeCards.Count - 1; i >= 0; i--)
         {
             GameObject card = _activeCards[i];
@@ -121,5 +146,10 @@ public class DodgeGame : MonoBehaviour
         }
 
         moveDeck.anchoredPosition = targetPos;
+    }
+
+    public void UIAway()
+    {
+        StartCoroutine(MoveDeck(_moveDistance, _moveDuration));
     }
 }
