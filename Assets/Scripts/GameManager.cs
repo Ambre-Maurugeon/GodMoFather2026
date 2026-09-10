@@ -5,6 +5,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     private bool isGameOn = false;
+    private int angryMeter = 0;
     [Header("SCORE")]
     [SerializeField] private int _player1Score = 0;
     [SerializeField] private int _player2Score = 0;

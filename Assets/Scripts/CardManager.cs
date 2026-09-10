@@ -13,8 +13,8 @@ public class CardManager : MonoBehaviour
     #region References
     [SerializeField] private CardDatabaseManager _dbMgr;
 
-    [Foldout("References"),SerializeField] private GameObject _deckParent;
-    [Foldout("References"),SerializeField] private GameObject _cardPref;
+    [Foldout("References"), SerializeField] private GameObject _deckParent;
+    [Foldout("References"), SerializeField] private GameObject _cardPref;
 
     #endregion
 
@@ -51,7 +51,7 @@ public class CardManager : MonoBehaviour
         // fill deck
         List<CardData> drawPile = new List<CardData>(_dbMgr.Cards);
 
-        while (drawPile.Count>0)
+        while (drawPile.Count > 0)
         {
             // get rd
             int rd = Random.Range(0, drawPile.Count);
@@ -71,9 +71,9 @@ public class CardManager : MonoBehaviour
 
     public void ClearDeck()
     {
-       deck.Clear();
+        deck.Clear();
 
-       foreach (Transform child in _deckParent.transform)
+        foreach (Transform child in _deckParent.transform)
             Destroy(child.gameObject);
     }
 
