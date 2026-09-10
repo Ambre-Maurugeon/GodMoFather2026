@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     private bool isGameOn = false;
     private int _monsterAngryMeter = 0;
     [SerializeField] private DodgeGame dodgeGame;
+    [SerializeField] private MonsterAngryMeter monsterAngryMeter;
     [Header("SCORE")]
     [SerializeField] private int _player1Score = 0;
     [SerializeField] private int _player2Score = 0;
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         dodgeGame = FindFirstObjectByType<DodgeGame>();
+        monsterAngryMeter = FindFirstObjectByType<MonsterAngryMeter>();
 
         isGameOn = true;
         _isPlayer1Turn = true;
@@ -72,8 +74,9 @@ public class GameManager : MonoBehaviour
             ChangePlayerTurn(1);
             Debug.Log($"Player 1 got 100 scores {_player2Score}");
         }
-        MonsterAngryMeter(_monsterAngryMeter);
+        MonsterAngryMeterDice(_monsterAngryMeter);
         _monsterAngryMeter++;
+        monsterAngryMeter.SetMeter(_monsterAngryMeter);
         UpdateText();
     }
     void ChangePlayerTurn(int changeTo)
@@ -99,7 +102,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
-    int[] MonsterAngryMeter(int multiplier)
+    int[] MonsterAngryMeterDice(int multiplier)
     {
         if (multiplier <= 0) return new int[0];
         int[] results = new int[multiplier];
@@ -118,7 +121,7 @@ public class GameManager : MonoBehaviour
         if (hasSix7)
         {
             Debug.Log("Prepare to dodge !");
-            _monsterAngryMeter = 0;
+            _monsterAngryMeter = -1;
             dodgeGame.StartGame();
         }
         if (diceResultText != null)
