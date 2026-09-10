@@ -119,7 +119,6 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Prepare to dodge !");
             _monsterAngryMeter = 0;
-            dodgeGame.UIAway();
             dodgeGame.StartGame();
         }
         if (diceResultText != null)

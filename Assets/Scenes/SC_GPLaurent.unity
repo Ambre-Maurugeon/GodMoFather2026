@@ -181,7 +181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &72864495
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1839,14 +1839,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5031ab2e975ec044bb1da0a63fbfe06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DodgeGame
-  moveDeck: {fileID: 689463958}
-  _moveDistance: 500
-  _moveDuration: 2
+  gameManager: {fileID: 390286587}
+  transitionElements:
+  - targetObject: {fileID: 689463957}
+    animType: 1
+    amount: 500
+    duration: 0.5
+    initialAnchoredPos: {x: 0, y: 0}
+    initialWorldPos: {x: 0, y: 0, z: 0}
+    initialColor: {r: 0, g: 0, b: 0, a: 0}
+    rectTransform: {fileID: 0}
+    canvasGroup: {fileID: 0}
+    spriteRenderer: {fileID: 0}
+  - targetObject: {fileID: 795217303}
+    animType: 2
+    amount: 500
+    duration: 0.5
+    initialAnchoredPos: {x: 0, y: 0}
+    initialWorldPos: {x: 0, y: 0, z: 0}
+    initialColor: {r: 0, g: 0, b: 0, a: 0}
+    rectTransform: {fileID: 0}
+    canvasGroup: {fileID: 0}
+    spriteRenderer: {fileID: 0}
   playerTransform: {fileID: 1000764708}
+  playerRenderer: {fileID: 0}
   minPos: -7
   maxPos: 7
   playerSpeedPerTile: 8
-  eventDuration: 15
+  eventDuration: 5
+  playerEntryOffsetY: 6
+  playerAnimDuration: 0.4
   cardPrefab: {fileID: 6905266245298880411, guid: 01fe3277e2495634a99cca533a06d0b1, type: 3}
   cardSpeed: 13
   cardPerSecond: 5
