@@ -13,3 +13,13 @@ public enum CARD_COLOR
     RED = 1,
     BLACK = 2,
 }
+
+public enum GameState
+{
+    INNIT,
+    Player1,
+    Player2,
+    AngryPhase,
+    Victory,
+    Defeat
+}
