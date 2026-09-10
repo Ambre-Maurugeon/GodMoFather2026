@@ -77,7 +77,9 @@ public class DodgeGame : MonoBehaviour
     [SerializeField] private int despawnY = -6;
 
     [Header("Score")]
-    [SerializeField] private int damagePerHit = 30;
+    [SerializeField] private int lostPerHit = 30;
+    [HideInInspector] public static int scoreLost = 0;
+    public event Action<int> OnGameEnded;
 
     private readonly List<GameObject> _activeCards = new List<GameObject>();
     private bool _isGameRunning;
@@ -86,6 +88,31 @@ public class DodgeGame : MonoBehaviour
     private Vector3 _playerRestPos;
     private Coroutine _gameTimerCoroutine;
     private Coroutine _spawnRoutine;
+
+    private void OnEnable()
+    {
+        PlayerCollision.OnCardHit += HandleCardHit;
+    }
+
+    private void OnDisable()
+    {
+        PlayerCollision.OnCardHit -= HandleCardHit;
+    }
+
+    private void HandleCardHit(GameObject cardObject)
+    {
+        if (!_isGameRunning) return;
+
+        scoreLost += lostPerHit;
+
+        // Destroy card after get hit
+        if (_activeCards.Contains(cardObject))
+        {
+            _activeCards.Remove(cardObject);
+        }
+
+        Destroy(cardObject);
+    }
 
     void Awake()
     {
@@ -129,6 +156,8 @@ public class DodgeGame : MonoBehaviour
     {
         if (!_isGameRunning && !_isTransitioning) return;
         StartCoroutine(StopSequenceRoutine());
+
+        OnGameEnded?.Invoke(DodgeGame.scoreLost);
     }
 
     private IEnumerator StartSequenceRoutine()
@@ -184,7 +213,6 @@ public class DodgeGame : MonoBehaviour
             yield return anims[i];
 
         _isTransitioning = false;
-        Debug.Log("Game Over: Event Finished and Scene Restored!");
     }
 
     private IEnumerator PlayTransition(AnimatedTarget item, bool reverse)

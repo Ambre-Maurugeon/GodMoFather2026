@@ -71,13 +71,11 @@ public class GameManager : MonoBehaviour
         {
             _player1Score += 100;
             ChangePlayerTurn(2);
-            Debug.Log($"Player 1 got 100 scores {_player1Score}");
         }
         else if (_isPlayer2Turn && !_isPlayer1Turn)
         {
             _player2Score += 100;
             ChangePlayerTurn(1);
-            Debug.Log($"Player 1 got 100 scores {_player2Score}");
         }
         _monsterAngryMeter++;
         monsterAngryMeter.SetMeter(_monsterAngryMeter);
@@ -91,26 +89,34 @@ public class GameManager : MonoBehaviour
             case 0:
                 _isPlayer1Turn = false;
                 _isPlayer2Turn = false;
-                iconPlayer1.GetComponent<Image>().color = afkColor;
-                iconPlayer2.GetComponent<Image>().color = afkColor;
+                if (iconPlayer1 != null)
+                    iconPlayer1.GetComponent<Image>().color = afkColor;
+                if (iconPlayer2 != null)
+                    iconPlayer2.GetComponent<Image>().color = afkColor;
                 break;
             case 1:
                 _isPlayer1Turn = true;
                 _isPlayer2Turn = false;
-                iconPlayer1.GetComponent<Image>().color = myTurnColor;
-                iconPlayer2.GetComponent<Image>().color = afkColor;
+                if (iconPlayer1 != null)
+                    iconPlayer1.GetComponent<Image>().color = myTurnColor;
+                if (iconPlayer2 != null)
+                    iconPlayer2.GetComponent<Image>().color = afkColor;
                 break;
             case 2:
                 _isPlayer1Turn = false;
                 _isPlayer2Turn = true;
-                iconPlayer1.GetComponent<Image>().color = afkColor;
-                iconPlayer2.GetComponent<Image>().color = myTurnColor;
+                if (iconPlayer1 != null)
+                    iconPlayer1.GetComponent<Image>().color = afkColor;
+                if (iconPlayer2 != null)
+                    iconPlayer2.GetComponent<Image>().color = myTurnColor;
                 break;
             default:
                 _isPlayer1Turn = true;
                 _isPlayer2Turn = false;
-                iconPlayer1.GetComponent<Image>().color = myTurnColor;
-                iconPlayer2.GetComponent<Image>().color = afkColor;
+                if (iconPlayer1 != null)
+                    iconPlayer1.GetComponent<Image>().color = myTurnColor;
+                if (iconPlayer2 != null)
+                    iconPlayer2.GetComponent<Image>().color = afkColor;
                 Debug.Log($"{changeTo} is not valid");
                 break;
         }
@@ -135,11 +141,27 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Prepare to dodge !");
             _monsterAngryMeter = 0;
+            DodgeGame.scoreLost = 0;
+
+            dodgeGame.OnGameEnded += HandleDodgeResult;
             dodgeGame.StartGame();
         }
         if (diceResultText != null)
             diceResultText.text = "Dice roll : " + string.Join(", ", results);
         return results;
+    }
+    private void HandleDodgeResult(int lostScore)
+    {
+        dodgeGame.OnGameEnded -= HandleDodgeResult;
+
+        // Reverse removing score (it's the other's turn)
+        if (_isPlayer1Turn && !_isPlayer2Turn)
+            _player2Score -= lostScore;
+        if (!_isPlayer1Turn && _isPlayer2Turn)
+            _player1Score -= lostScore;
+
+        Debug.Log($"Total Lost: {DodgeGame.scoreLost}");
+        UpdateText();
     }
     void UpdateText()
     {
