@@ -112,12 +112,12 @@ public class GameManager : MonoBehaviour
     {
         if (_isPlayer1Turn)
         {
-            _player1Multiplier += multiplier;
+            _player1Multiplier *= multiplier;
             player1MultiText.text = "x" +  _player1Multiplier.ToString();
         }
         else if (_isPlayer2Turn)
         {
-            _player2Multiplier += multiplier;
+            _player2Multiplier *= multiplier;
             player2MultiText.text = "x" +  _player2Multiplier.ToString();
         }
     }

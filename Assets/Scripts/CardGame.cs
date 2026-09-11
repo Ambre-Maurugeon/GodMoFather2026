@@ -135,7 +135,7 @@ public class CardGame : MonoBehaviour
         // clean arena and keep last card
 
         if (GameManager.isMiniGameOn == false)
-            Invoke("PrepareArenaForNextCombo", 1.5f);
+            Invoke("PrepareArenaForNextCombo", 0.75f);
         else
             PrepareArenaForNextCombo();
     }

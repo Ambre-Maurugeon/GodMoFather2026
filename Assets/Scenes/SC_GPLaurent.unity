@@ -474,7 +474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: x2
+  m_text: x1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5254902, g: 0.5254902, b: 0.5254902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -754,7 +754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   dodgeGame: {fileID: 1489812425}
   monsterAngryMeter: {fileID: 878679343}
-  _scoreGoal: 1000000
+  _scoreGoal: 1000
   currentTurnText: {fileID: 1753193135}
   player1ScoreText: {fileID: 668401101}
   player2ScoreText: {fileID: 1964827857}
@@ -765,8 +765,8 @@ MonoBehaviour:
   diceResultText: {fileID: 660755626}
   iconPlayer1: {fileID: 452064331}
   iconPlayer2: {fileID: 314679823}
-  myTurnColor: {r: 0.3443396, g: 0.5925984, b: 1, a: 1}
-  afkColor: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
+  myTurnColor: {r: 1, g: 1, b: 0.1490565, a: 1}
+  afkColor: {r: 0.5245282, g: 0.5245282, b: 0.5245282, a: 1}
 --- !u!1 &426098970
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.14901961, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1237,7 +1237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 233, y: -87}
+  m_AnchoredPosition: {x: 233, y: -124}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &521022269
@@ -2181,7 +2181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Score J1
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2380,7 +2380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 67, y: -87}
+  m_AnchoredPosition: {x: 67, y: -124}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779340686
@@ -3228,8 +3228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4855d8006d990e48a1a7eaa118ff9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: -2856072534722823855, guid: 658859dee37d9f749ba31fed3864fc69, type: 3}
+  P2: {fileID: 2138651463138402081, guid: ecd6f436b682f0c4b8a07d7b4ad45b8c, type: 3}
 --- !u!70 &1000764712
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3520,7 +3520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150.96, y: -87}
+  m_AnchoredPosition: {x: 150.96, y: -124}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132647735
@@ -4244,7 +4244,7 @@ MonoBehaviour:
   minPos: -7
   maxPos: 7
   playerSpeedPerTile: 8
-  eventDuration: 15
+  eventDuration: 10
   playerEntryOffsetY: 6
   playerAnimDuration: 0.4
   monsterFalse: {fileID: 1787779317}
@@ -5432,7 +5432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Score J2
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
