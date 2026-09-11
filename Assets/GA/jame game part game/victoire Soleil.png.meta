@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: 58c77ab5ba0e20342945e90c63fd8d2c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8742163748334026734
+    second: victoire Soleil_0
+  - first:
+      213: 3573466811484991948
+    second: victoire Soleil_1
+  - first:
+      213: -6633409124146944969
+    second: victoire Soleil_2
+  - first:
+      213: 3142591884566946723
+    second: victoire Soleil_3
+  - first:
+      213: 3828248399497601652
+    second: victoire Soleil_4
+  - first:
+      213: -2824152080381225203
+    second: victoire Soleil_5
+  - first:
+      213: 454163322403895008
+    second: victoire Soleil_6
+  - first:
+      213: 8515539428880997261
+    second: victoire Soleil_7
+  - first:
+      213: 6062384356005003579
+    second: victoire Soleil_8
+  - first:
+      213: -632403738292258273
+    second: victoire Soleil_9
+  - first:
+      213: 5208852576888131484
+    second: victoire Soleil_10
+  - first:
+      213: 3240019972258004348
+    second: victoire Soleil_11
+  - first:
+      213: -1211150461208182921
+    second: victoire Soleil_12
+  - first:
+      213: 5213144448285283640
+    second: victoire Soleil_13
+  - first:
+      213: -75429297341616160
+    second: victoire Soleil_14
+  - first:
+      213: 6822875260398773749
+    second: victoire Soleil_15
+  - first:
+      213: 9049113727296572782
+    second: victoire Soleil_16
+  - first:
+      213: 4042299636617624051
+    second: victoire Soleil_17
+  - first:
+      213: 453270665308928182
+    second: victoire Soleil_18
+  - first:
+      213: -4115432808981725412
+    second: victoire Soleil_19
+  - first:
+      213: 5318760506707479626
+    second: victoire Soleil_20
+  - first:
+      213: -8759674709761819710
+    second: victoire Soleil_21
+  - first:
+      213: 2736242000650306098
+    second: victoire Soleil_22
+  - first:
+      213: 9203397745369310735
+    second: victoire Soleil_23
+  - first:
+      213: 7237844501101356535
+    second: victoire Soleil_24
+  - first:
+      213: 3433066543903297874
+    second: victoire Soleil_25
+  - first:
+      213: -2501533096193628058
+    second: victoire Soleil_26
+  - first:
+      213: 1766090815675133528
+    second: victoire Soleil_27
+  - first:
+      213: -6347531924280563376
+    second: victoire Soleil_28
+  - first:
+      213: -5042757350458947261
+    second: victoire Soleil_29
+  - first:
+      213: -2314531692307898292
+    second: victoire Soleil_30
+  - first:
+      213: 5804363062583598755
+    second: victoire Soleil_31
+  - first:
+      213: -4525018663132207045
+    second: victoire Soleil_32
+  - first:
+      213: -1379038945318976767
+    second: victoire Soleil_33
+  - first:
+      213: -7630710396283148455
+    second: victoire Soleil_34
+  - first:
+      213: -5034406198771489537
+    second: victoire Soleil_35
+  - first:
+      213: -5356193026011141027
+    second: victoire Soleil_36
+  - first:
+      213: -4381608436972940733
+    second: victoire Soleil_37
+  - first:
+      213: -2100540726398714211
+    second: victoire Soleil_38
+  - first:
+      213: -2460631489793027631
+    second: victoire Soleil_39
+  - first:
+      213: -836884048669214229
+    second: victoire Soleil_40
+  - first:
+      213: -3442224881984859583
+    second: victoire Soleil_41
+  - first:
+      213: 7054365561592243895
+    second: victoire Soleil_42
+  - first:
+      213: 1756501821017477156
+    second: victoire Soleil_43
+  - first:
+      213: 4685396980104968351
+    second: victoire Soleil_44
+  - first:
+      213: -7237324138954392721
+    second: victoire Soleil_45
+  - first:
+      213: 4421182871215377092
+    second: victoire Soleil_46
+  - first:
+      213: 4287837151816706404
+    second: victoire Soleil_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: victoire Soleil_0
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 0
+        width: 955
+        height: 1029
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 210c04c83689da680800000000000000
+      internalID: -8742163748334026734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_1
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 7
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc1f53bc121879130800000000000000
+      internalID: 3573466811484991948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_2
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 734e2610c8561f3a0800000000000000
+      internalID: -6633409124146944969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_3
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 12
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a363a93baabc9b20800000000000000
+      internalID: 3142591884566946723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_4
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 12
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472230ce2aba02530800000000000000
+      internalID: 3828248399497601652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_5
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 0
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07523955a89ec8d0800000000000000
+      internalID: -2824152080381225203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_6
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 0
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e635eda2238d4600800000000000000
+      internalID: 454163322403895008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_7
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 12
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8bd8494ef54d2670800000000000000
+      internalID: 8515539428880997261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_8
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 0
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31409fa37ae12450800000000000000
+      internalID: 6062384356005003579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_9
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 5
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1af57096204937f0800000000000000
+      internalID: -632403738292258273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_10
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 0
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f8bcc22df894840800000000000000
+      internalID: 5208852576888131484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_11
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 9
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7dfb979ffcd6fc20800000000000000
+      internalID: 3240019972258004348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_12
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 9
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77fb22e8211213fe0800000000000000
+      internalID: -1211150461208182921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_13
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 3
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83518da514fc85840800000000000000
+      internalID: 5213144448285283640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_14
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 2
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0efab46247504fef0800000000000000
+      internalID: -75429297341616160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_15
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 0
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5aed276e8bfae50800000000000000
+      internalID: 6822875260398773749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_16
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 0
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d8f9f9df8e49d70800000000000000
+      internalID: 9049113727296572782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_17
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 10
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9b84c3a12291830800000000000000
+      internalID: 4042299636617624051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_18
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 7
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8f7d0c4475a4600800000000000000
+      internalID: 453270665308928182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_19
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 10
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ff7ab2aab03e6c0800000000000000
+      internalID: -4115432808981725412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_20
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 9
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c0da7308800d940800000000000000
+      internalID: 5318760506707479626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_21
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 0
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb7ca023426f6680800000000000000
+      internalID: -8759674709761819710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_22
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 0
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23204443a9519f520800000000000000
+      internalID: 2736242000650306098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_23
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 10
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f066e5bdc7909bf70800000000000000
+      internalID: 9203397745369310735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_24
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 8
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f529abd93df17460800000000000000
+      internalID: 7237844501101356535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_25
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 9
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25152af15d3b4af20800000000000000
+      internalID: 3433066543903297874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_26
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 8
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668ee7717e4c84dd0800000000000000
+      internalID: -2501533096193628058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_27
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 5
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e656d5d3a628810800000000000000
+      internalID: 1766090815675133528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_28
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 0
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0592ec4785909e7a0800000000000000
+      internalID: -6347531924280563376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_29
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 9
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349876d48e6840ab0800000000000000
+      internalID: -5042757350458947261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_30
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 0
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40aa9250b121efd0800000000000000
+      internalID: -2314531692307898292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_31
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 0
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae91bcd37d3d8050800000000000000
+      internalID: 5804363062583598755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_32
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b38edfd1087e331c0800000000000000
+      internalID: -4525018663132207045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_33
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 0
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10345dcb26bacdce0800000000000000
+      internalID: -1379038945318976767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_34
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 0
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 957a9a5e2554a1690800000000000000
+      internalID: -7630710396283148455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_35
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 5
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff463335c32322ab0800000000000000
+      internalID: -5034406198771489537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_36
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 0
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c6e2832dafaa5b0800000000000000
+      internalID: -5356193026011141027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_37
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 0
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3429f5167566133c0800000000000000
+      internalID: -4381608436972940733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_38
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 1
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e73c6a65169d2e0800000000000000
+      internalID: -2100540726398714211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_39
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 0
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d11fbf62b41addd0800000000000000
+      internalID: -2460631489793027631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_40
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 4
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be971e8446ac264f0800000000000000
+      internalID: -836884048669214229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_41
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 0
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 142184025b2ca30d0800000000000000
+      internalID: -3442224881984859583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_42
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 0
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b664764a1426e160800000000000000
+      internalID: 7054365561592243895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_43
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420d2119919506810800000000000000
+      internalID: 1756501821017477156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_44
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 2
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9838d6aabfd50140800000000000000
+      internalID: 4685396980104968351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_45
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 0
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b73456a0cdf8b90800000000000000
+      internalID: -7237324138954392721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_46
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca85dd95623b5d30800000000000000
+      internalID: 4421182871215377092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoire Soleil_47
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 0
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 469e1c0fb25718b30800000000000000
+      internalID: 4287837151816706404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      victoire Soleil_0: -8742163748334026734
+      victoire Soleil_1: 3573466811484991948
+      victoire Soleil_10: 5208852576888131484
+      victoire Soleil_11: 3240019972258004348
+      victoire Soleil_12: -1211150461208182921
+      victoire Soleil_13: 5213144448285283640
+      victoire Soleil_14: -75429297341616160
+      victoire Soleil_15: 6822875260398773749
+      victoire Soleil_16: 9049113727296572782
+      victoire Soleil_17: 4042299636617624051
+      victoire Soleil_18: 453270665308928182
+      victoire Soleil_19: -4115432808981725412
+      victoire Soleil_2: -6633409124146944969
+      victoire Soleil_20: 5318760506707479626
+      victoire Soleil_21: -8759674709761819710
+      victoire Soleil_22: 2736242000650306098
+      victoire Soleil_23: 9203397745369310735
+      victoire Soleil_24: 7237844501101356535
+      victoire Soleil_25: 3433066543903297874
+      victoire Soleil_26: -2501533096193628058
+      victoire Soleil_27: 1766090815675133528
+      victoire Soleil_28: -6347531924280563376
+      victoire Soleil_29: -5042757350458947261
+      victoire Soleil_3: 3142591884566946723
+      victoire Soleil_30: -2314531692307898292
+      victoire Soleil_31: 5804363062583598755
+      victoire Soleil_32: -4525018663132207045
+      victoire Soleil_33: -1379038945318976767
+      victoire Soleil_34: -7630710396283148455
+      victoire Soleil_35: -5034406198771489537
+      victoire Soleil_36: -5356193026011141027
+      victoire Soleil_37: -4381608436972940733
+      victoire Soleil_38: -2100540726398714211
+      victoire Soleil_39: -2460631489793027631
+      victoire Soleil_4: 3828248399497601652
+      victoire Soleil_40: -836884048669214229
+      victoire Soleil_41: -3442224881984859583
+      victoire Soleil_42: 7054365561592243895
+      victoire Soleil_43: 1756501821017477156
+      victoire Soleil_44: 4685396980104968351
+      victoire Soleil_45: -7237324138954392721
+      victoire Soleil_46: 4421182871215377092
+      victoire Soleil_47: 4287837151816706404
+      victoire Soleil_5: -2824152080381225203
+      victoire Soleil_6: 454163322403895008
+      victoire Soleil_7: 8515539428880997261
+      victoire Soleil_8: 6062384356005003579
+      victoire Soleil_9: -632403738292258273
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
