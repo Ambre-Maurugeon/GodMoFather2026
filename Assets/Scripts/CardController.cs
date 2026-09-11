@@ -8,6 +8,7 @@ public class CardController : MonoBehaviour, IPointerClickHandler
     public CardData MyData => _myData;
 
     private bool _isSelected = false;
+    private bool _ignoreSelection = false;
     [SerializeField] private Image _img;
 
 
@@ -17,12 +18,18 @@ public class CardController : MonoBehaviour, IPointerClickHandler
         _img.sprite = _myData.Sprite;
     }
 
+    public void IgnoreSelection()
+    {
+        _ignoreSelection = true;
+    }
+
     #region Click
 
     //Detect if a click occurs
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         if (!CardManager.Instance.CanInteract) return;
+        if (_ignoreSelection) return;
 
         if (_isSelected)
         {
