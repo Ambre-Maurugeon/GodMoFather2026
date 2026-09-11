@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -881727528027406638, guid: 5727bee6cec6c0c449cd07b4e26bc9e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -88,4 +88,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c27f895dfea7d3f4a83778fd37a6f948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardController
-  index: 0
