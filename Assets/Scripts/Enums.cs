@@ -1,19 +1,13 @@
 public enum CARD_TYPE
 {
     NONE = 0,
-    SPADE = 1,
-    DIAMOND = 2,
-    HEART = 3,
-    CLUB = 4,
+    DARK_MOON = 1,
+    DARK_SUN = 2,
+    LIGHT_MOON = 3,
+    LIGHT_SUN = 4,
     OUDLER = 5,
 }
 
-public enum CARD_COLOR
-{
-    NONE = 0,
-    SUN = 1,
-    MOON = 2,
-}
 
 public enum GameState
 {

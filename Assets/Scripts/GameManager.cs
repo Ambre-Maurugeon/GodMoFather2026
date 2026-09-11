@@ -195,6 +195,8 @@ public class GameManager : MonoBehaviour
 
             dodgeGame.OnGameEnded += HandleDodgeResult;
             dodgeGame.StartGame();
+
+            monsterAngryMeter.SetMeter(this._monsterAngryMeter);
         }
         if (diceResultText != null)
             diceResultText.text = "Dice roll : " + string.Join(", ", results);

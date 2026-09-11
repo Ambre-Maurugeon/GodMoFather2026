@@ -7,7 +7,6 @@ public class CardData
     public int id;
     public CARD_TYPE CardType;
     public int CardNumber;
-    public CARD_COLOR Color;
     public Sprite Sprite;
 
 }
