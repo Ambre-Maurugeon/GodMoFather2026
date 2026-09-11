@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
     public void IncrementAngryMeter()
     {
         _monsterAngryMeter++;
-
+        monsterAngryMeter.SetMeter(this._monsterAngryMeter);
     }
     void ChangePlayerTurn(int changeTo)
     {
