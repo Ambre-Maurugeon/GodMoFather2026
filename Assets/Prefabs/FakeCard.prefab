@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7432110247411545184}
   - component: {fileID: 6976396946120145833}
   - component: {fileID: 2285888481769836181}
+  - component: {fileID: 551443599889669693}
   m_Layer: 0
   m_Name: FakeCard
   m_TagString: Card
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.23, y: 3.7129772, z: 1.2628814}
+  m_LocalScale: {x: 0.099999994, y: 0.16650122, z: 0.05663145}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -138,3 +139,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &551443599889669693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6905266245298880411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ead2fd13cae37b46ba75d50b21c8e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImageRandomizer
