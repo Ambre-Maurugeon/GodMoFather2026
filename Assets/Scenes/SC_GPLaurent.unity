@@ -756,8 +756,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   dodgeGame: {fileID: 1489812425}
   monsterAngryMeter: {fileID: 878679343}
-  _player1Score: 0
-  _player2Score: 0
   _scoreGoal: 1000000
   currentTurnText: {fileID: 1753193135}
   player1ScoreText: {fileID: 668401101}
@@ -1587,7 +1585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &618247222
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3230,6 +3228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4855d8006d990e48a1a7eaa118ff9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
+  P1: {fileID: -2856072534722823855, guid: 658859dee37d9f749ba31fed3864fc69, type: 3}
+  P2: {fileID: 2138651463138402081, guid: ecd6f436b682f0c4b8a07d7b4ad45b8c, type: 3}
 --- !u!70 &1000764712
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4244,19 +4244,19 @@ MonoBehaviour:
   minPos: -7
   maxPos: 7
   playerSpeedPerTile: 8
-  eventDuration: 5
+  eventDuration: 15
   playerEntryOffsetY: 6
   playerAnimDuration: 0.4
   monsterFalse: {fileID: 1787779317}
   monsterTrue: {fileID: 924593261}
   cardPrefab: {fileID: 6905266245298880411, guid: 01fe3277e2495634a99cca533a06d0b1, type: 3}
   cardSpeed: 13
-  cardPerSecond: 5
+  cardPerSecond: 6
   minCardPosSpawn: -7
   maxCardPosSpawn: 7
-  spawnY: 16
+  spawnY: 12
   despawnY: -7
-  lostPerHit: 30
+  lostPerHit: 20
 --- !u!1 &1520086091
 GameObject:
   m_ObjectHideFlags: 0
@@ -5532,7 +5532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2019292950
 RectTransform:
   m_ObjectHideFlags: 0

@@ -16,19 +16,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private DodgeGame dodgeGame;
     [SerializeField] private MonsterAngryMeter monsterAngryMeter;
     [Header("SCORE")]
-    [SerializeField] private int _player1Score = 0;
-    [SerializeField] private int _player2Score = 0;
-    private bool _isPlayer1Turn
-    {
-        get { return testJ1; }
-        set
-        {
-            testJ1 = value;
-            Debug.Log($"is player turn {testJ1} ");
-        }
-    }
-
-    private bool testJ1 = false;
+    private int _player1Score = 0;
+    private int _player2Score = 0;
+    private bool _isPlayer1Turn = false;
     private bool _isPlayer2Turn = false;
     [SerializeField] private int _scoreGoal = 1000; //1k
 
@@ -239,5 +229,14 @@ public class GameManager : MonoBehaviour
         {
             currentTurnText.text = "Player 2's turn";
         }
+    }
+    public int WhosTurn()
+    {
+        if (_isPlayer1Turn && !_isPlayer2Turn)
+            return 1;
+        if (!_isPlayer1Turn && _isPlayer2Turn)
+            return 2;
+        else
+            return 0;
     }
 }
