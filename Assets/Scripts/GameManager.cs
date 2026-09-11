@@ -35,13 +35,17 @@ public class GameManager : MonoBehaviour
         monsterAngryMeter = FindFirstObjectByType<MonsterAngryMeter>();
 
         isGameOn = true;
+        CardManager.Instance?.CreateDeck();
         _isPlayer1Turn = true;
         _isPlayer2Turn = false;
         StartCoroutine("StartGame");
     }
+
     IEnumerator StartGame()
     {
         string winner = "None";
+
+
         while (isGameOn)
         {
             // Endgame

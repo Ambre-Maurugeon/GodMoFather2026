@@ -32,6 +32,8 @@ public class CardManager : MonoBehaviour
     private List<CardData> _kings = new List<CardData>();   
     private List<CardData> _oudlers = new List<CardData>();
 
+    public bool CanInteract { get;set; }
+
 
     #endregion
 
@@ -53,9 +55,11 @@ public class CardManager : MonoBehaviour
     {
         // Sort Cards at init
         SortCardsByType();
+
+        CanInteract = true;
     }
     #endregion
-
+    
 
     private void SortCardsByType()
     {
@@ -115,7 +119,6 @@ public class CardManager : MonoBehaviour
 
         }
 
-
     }
 
     private CardData GetRandomCard()
@@ -163,6 +166,13 @@ public class CardManager : MonoBehaviour
         return rdCard;
     }
 
+    public void CloseRound()
+    {
+        CheckDeckCount();
+
+        CanInteract = true;
+    }
+
     public void ClearDeck()
     {
        _deck.Clear();
@@ -170,6 +180,13 @@ public class CardManager : MonoBehaviour
         foreach (Transform child in _cardsParent.transform)
             Destroy(child.gameObject);
     }
+
+    private void CheckDeckCount()
+    {
+        if(_cardsParent.GetComponentsInChildren<Transform>().Length<=1)
+            CreateDeck();
+    }
+
 
     //private void ShuffleDeck()
     //{

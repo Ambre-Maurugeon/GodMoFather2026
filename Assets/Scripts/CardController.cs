@@ -7,9 +7,6 @@ public class CardController : MonoBehaviour, IPointerClickHandler
     private CardData _myData;
     public CardData MyData => _myData;
 
-    [Header("Values")]
-    [SerializeField] private int _index;
-
     private bool _isSelected = false;
 
     // -- Components --
@@ -20,17 +17,6 @@ public class CardController : MonoBehaviour, IPointerClickHandler
         _img = GetComponent<Image>();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void UpdateCardInfo(CardData data)
     {
@@ -43,16 +29,19 @@ public class CardController : MonoBehaviour, IPointerClickHandler
     //Detect if a click occurs
     public void OnPointerClick(PointerEventData pointerEventData)
     {
+        if (!CardManager.Instance.CanInteract) return;
+
         if(_isSelected)
         {
             _isSelected = false;
-            CardGame.Instance.RemoveCard(this);
+            CardGame.Instance?.RemoveCard(this);
         }
         else
         {
             _isSelected = true;
-            CardGame.Instance.SelectCard(this);
+            CardGame.Instance?.SelectCard(this);
         }
     }
-        #endregion
+    
+    #endregion
     }

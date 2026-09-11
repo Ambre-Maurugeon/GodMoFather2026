@@ -4,8 +4,10 @@ using System.Linq;
 using NaughtyAttributes;
 using NUnit.Framework;
 using TMPro;
+using Unity.Android.Gradle;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CardGame : MonoBehaviour
 {
@@ -14,35 +16,55 @@ public class CardGame : MonoBehaviour
     public static CardGame Instance => _instance;
     #endregion
 
-    // -- ARENA --
-    List<CardController> arena = new();
-    CardController previousCard;
+    #region Fields
+    // ---- ARENA ----
 
-    [SerializeField] private Transform _playedCard01;
-    [SerializeField] private Transform _playedCard02;
-    [SerializeField] private Transform _playedCard03;
+    [Header("Arena")]
+    [SerializeField, FormerlySerializedAs("_playedCard01")] private Transform _arenaCard01;
+    [SerializeField, FormerlySerializedAs("_playedCard02")] private Transform _arenaCard02;
+    [SerializeField, FormerlySerializedAs("_playedCard03")] private Transform _arenaCard03;
 
     [SerializeField]private Transform _playedCardsParent;
 
-    // -- HAND --
+    private List<CardController> _arena = new();
 
+    // - LINKS -
+    private CardController _previousCard;
+
+    private int _links = 0;
+    [Header("Hand && deck")]
+    [Foldout("Links"), SerializeField] float OneLinkCoeff = 0.15f;
+    [Foldout("Links"), SerializeField] float TwoLinksCoeff = 0.20f;
+    [Foldout("Links"), SerializeField] float ThreeLinksCoeff = 0.40f;
+    [Foldout("Links"), SerializeField] float FourLinksCoeff = 0.60f;
+    [Foldout("Links"), SerializeField] float FiveLinksCoeff = 0.80f;
+
+
+    // ---- HAND ----
     List<CardController> hand = new();
 
-    // -- SCORE --
+    // ---- SCORE ----
     [Header("Score")]
     [SerializeField] private TextMeshProUGUI _textScoreJ1;
     [SerializeField] private TextMeshProUGUI _textScoreJ2;
+
+    [Space(10)]
+    [SerializeField] private TextMeshProUGUI _textMultiplicateurJ1;
+    [SerializeField] private TextMeshProUGUI _textMultiplicateurJ2;
     private int _scoreJ1;
     private int _scoreJ2;
+    private int _multiplicatorJ1 = 1;
+    private int _multiplicatorJ2 = 1;
 
-    // -- COMBO --
+    // ---- COMBO ----
     [Header("Combos")]
-    [SerializeField] private int _basicCombo = 1;
-    [SerializeField] private int _jackCombo = 2;
-    [SerializeField] private int _knightCombo = 3;
-    [SerializeField] private int _queenCombo = 4;
-    [SerializeField] private int _kingCombo = 5;
+    [Foldout("Combos"), SerializeField] private int _basicCombo = 1;
+    [Foldout("Combos"), SerializeField] private int _jackCombo = 2;
+    [Foldout("Combos"), SerializeField] private int _knightCombo = 3;
+    [Foldout("Combos"), SerializeField] private int _queenCombo = 4;
+    [Foldout("Combos"), SerializeField] private int _kingCombo = 5;
 
+    #endregion
 
     #region Main
     private void Awake()
@@ -60,66 +82,117 @@ public class CardGame : MonoBehaviour
 
     private void Combo()
     {
-        
-        //Debug.Log("Combo");
+        // check links
+        CheckPreviousCard();
 
-        // oudler TO EDIT
-        //int tempoMultiplicateur = 1;
-        //if (arena[0].MyData.CardType == CARD_TYPE.OUDLER || arena[0].MyData.CardType == CARD_TYPE.OUDLER)
-        //{
-        //    Debug.Log("oudler");
-        //        tempoMultiplicateur = 1; // depend du card number
-        //}
+        // TO EDIT if J1isPlaying or if J2isPlaying
+        // oudler MULTIPLICATOR
+        if (_arena[0].MyData.CardType == CARD_TYPE.OUDLER || _arena[0].MyData.CardType == CARD_TYPE.OUDLER)
+        {
+            if(_arena[0].MyData.CardType == CARD_TYPE.OUDLER)
+            {
+                Debug.Log("oudler on first card");
+                _multiplicatorJ1 = _arena[0].MyData.CardNumber;
+                _textMultiplicateurJ1.text = _multiplicatorJ1.ToString();
+            }
+            else
+            {
+                Debug.Log("oudler on second card");
+                _multiplicatorJ1 = _arena[1].MyData.CardNumber;
+                _textMultiplicateurJ2.text = _multiplicatorJ2.ToString();
+            }
+        }
+        // multiplicateur agit dès sa main ou sur les prochains tours ? stop ici ou pas
 
-        int cardNumber01 = arena[0].MyData.CardNumber;
-        int cardNumber02 = arena[1].MyData.CardNumber;
+        // SCORE
+        int cardNumber01 = _arena[0].MyData.CardNumber;
+        int cardNumber02 = _arena[1].MyData.CardNumber;
 
         Debug.Log(cardNumber01 + "," + cardNumber02);
 
         int[] cardNumbers = new int[] { cardNumber01, cardNumber02 };
 
+        // if J1isPlaying or if J2isPlaying
         int tempoScore = _scoreJ1;
 
         //none
         if (cardNumber01 <= 10 && cardNumber02 <= 10)
-            tempoScore+= _basicCombo;
+            tempoScore+= _basicCombo * _multiplicatorJ1;
         // king
         else if (cardNumbers.Contains(50))
-            tempoScore += _kingCombo;
+            tempoScore += _kingCombo * _multiplicatorJ1;
         // queen
         else if (cardNumbers.Contains(40))
-            tempoScore += _queenCombo;
+            tempoScore += _queenCombo * _multiplicatorJ1;
         //knight
         else if (cardNumbers.Contains(30))
-            tempoScore += _knightCombo;
+            tempoScore += _knightCombo * _multiplicatorJ1;
         //jack
         else if (cardNumbers.Contains(20))
-            tempoScore += _jackCombo;
+            tempoScore += _jackCombo * _multiplicatorJ1;
 
+        // if J1isPlaying or if J2isPlaying
         _scoreJ1 = tempoScore;
-        _textScoreJ1.text = tempoScore.ToString();
+        _textScoreJ1.text = _scoreJ1.ToString();
 
-        // finir le pli
+        // clean arena and keep last card
         Invoke("PrepareArenaForNextCombo", 1.5f);
+    }
+
+    private void CheckPreviousCard()
+    {
+        if (!_previousCard) return;
+
+        Debug.Log("Last card type : " + _previousCard.MyData.CardType + "/n first card type in hand : " + _arena[0].MyData.CardType);
+        // reset _links if failure ??
+
+        if (_previousCard.MyData.CardType == _arena[0].MyData.CardType)
+        {
+            _links++;
+        }
+
+        switch (_links)
+        {
+            case 1:
+                Debug.Log("Anger" + OneLinkCoeff);
+                break;
+
+            case 2:
+                Debug.Log("Anger" + TwoLinksCoeff);
+                break;
+            case 3:
+                Debug.Log("Anger" + ThreeLinksCoeff);
+                break;
+            case 4:
+                Debug.Log("Anger" + FourLinksCoeff);
+                break;
+            case 5:
+                Debug.Log("Anger" + FiveLinksCoeff);
+                break;
+
+        }
     }
 
     private void PrepareArenaForNextCombo()
     {
-        if(previousCard) Destroy(previousCard.gameObject);
-
-        previousCard = arena[arena.Count - 1];
+        // update previous card with last card
+        if(_previousCard) Destroy(_previousCard.gameObject);
+        _previousCard = _arena[_arena.Count - 1];
 
         // delete all except the last one
-        for (int i = 0; i < arena.Count - 1; i++)
+        for (int i = 0; i < _arena.Count - 1; i++)
         {
-            Destroy(arena[i].gameObject);
+            Destroy(_arena[i].gameObject);
         }
 
-        previousCard.transform.position = _playedCard01.position;
+        // update pos last card (previous card now)
+        _previousCard.transform.position = _arenaCard01.position;
 
         // clear
-        arena.Clear();
+        _arena.Clear();
         ClearHand();
+
+        CardManager.Instance?.CloseRound();
 
     }
 
@@ -132,8 +205,11 @@ public class CardGame : MonoBehaviour
         controller.transform.SetParent(_playedCardsParent, true);
         controller.transform.position = new Vector3(controller.transform.position.x, controller.transform.position.y + 75, controller.transform.position.z); // up
 
-        if(hand.Count >=2)
+        if(hand.Count >= 2)
+        {
+            CardManager.Instance.CanInteract = false;
             Invoke("PlayCards", 0.5f);
+        }
     }
 
     public void RemoveCard(CardController controller)
@@ -144,19 +220,19 @@ public class CardGame : MonoBehaviour
 
     private void PlayCards()
     {
-        arena = new List<CardController>(hand);
+        _arena = new List<CardController>(hand);
 
         // Visuals => move card to the middle
         // can do a list of place card
-        if (!previousCard)
+        if (!_previousCard)
         {
-            hand[0].transform.position = _playedCard01.position;
-            hand[1].transform.position = _playedCard02.position;
+            hand[0].transform.position = _arenaCard01.position;
+            hand[1].transform.position = _arenaCard02.position;
         }
         else
         {
-            hand[0].transform.position = _playedCard02.position;
-            hand[1].transform.position = _playedCard03.position;
+            hand[0].transform.position = _arenaCard02.position;
+            hand[1].transform.position = _arenaCard03.position;
         }
 
         // Combo Count
@@ -166,10 +242,10 @@ public class CardGame : MonoBehaviour
     [Button]
     private void ClearArena()
     {
-        foreach (var c in arena)
+        foreach (var c in _arena)
             Destroy(c.gameObject);
 
-        arena.Clear();
+        _arena.Clear();
     }
 
     private void ClearHand()
@@ -177,6 +253,11 @@ public class CardGame : MonoBehaviour
         hand.Clear();
     }
 
+    public void ResetMultiplicators()
+    {
+        _multiplicatorJ1 = 1;
+        _multiplicatorJ2 = 1;
+    }
 
 
     }
