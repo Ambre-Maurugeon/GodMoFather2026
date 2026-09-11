@@ -148,12 +148,18 @@ public class DodgeGame : MonoBehaviour
 
     public void StartGame()
     {
+        AudioManager.Instance.StopMusic();
+        AudioManager.Instance.PlaySFX(SoundType.MonsterGrowl);
+        AudioManager.Instance.PlayMusic(SoundType.MiniJeu);
         if (_isGameRunning || _isTransitioning) return;
         StartCoroutine(StartSequenceRoutine());
     }
 
     public void StopGame()
     {
+        AudioManager.Instance.StopMusic();
+        AudioManager.Instance.PlaySFX(SoundType.MonsterGrowl);
+        AudioManager.Instance.PlayMusic(SoundType.MainTheme);
         if (!_isGameRunning && !_isTransitioning) return;
         StartCoroutine(StopSequenceRoutine());
 

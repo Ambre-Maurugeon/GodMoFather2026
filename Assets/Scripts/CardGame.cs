@@ -4,7 +4,6 @@ using System.Linq;
 using NaughtyAttributes;
 using NUnit.Framework;
 using TMPro;
-using Unity.Android.Gradle;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -24,7 +23,7 @@ public class CardGame : MonoBehaviour
     [SerializeField, FormerlySerializedAs("_playedCard02")] private Transform _arenaCard02;
     [SerializeField, FormerlySerializedAs("_playedCard03")] private Transform _arenaCard03;
 
-    [SerializeField]private Transform _playedCardsParent;
+    [SerializeField] private Transform _playedCardsParent;
 
     private List<CardController> _arena = new();
 
@@ -88,7 +87,7 @@ public class CardGame : MonoBehaviour
         // oudler MULTIPLICATOR
         if (_arena[0].MyData.CardType == CARD_TYPE.OUDLER || _arena[0].MyData.CardType == CARD_TYPE.OUDLER)
         {
-            if(_arena[0].MyData.CardType == CARD_TYPE.OUDLER)
+            if (_arena[0].MyData.CardType == CARD_TYPE.OUDLER)
             {
                 Debug.Log("oudler on first card");
                 _multiplicatorJ1 = _arena[0].MyData.CardNumber;
@@ -101,7 +100,7 @@ public class CardGame : MonoBehaviour
                 _textMultiplicateurJ2.text = _multiplicatorJ2.ToString();
             }
         }
-        // multiplicateur agit dès sa main ou sur les prochains tours ? stop ici ou pas
+        // multiplicateur agit dï¿½s sa main ou sur les prochains tours ? stop ici ou pas
 
         // SCORE
         int cardNumber01 = _arena[0].MyData.CardNumber;
@@ -115,7 +114,7 @@ public class CardGame : MonoBehaviour
 
         //none
         if (cardNumber01 <= 10 && cardNumber02 <= 10)
-            tempoScore+= _basicCombo * _multiplicatorJ1 * _globalCoeff;
+            tempoScore += _basicCombo * _multiplicatorJ1 * _globalCoeff;
         // king
         else if (cardNumbers.Contains(50))
             tempoScore += _kingCombo * _multiplicatorJ1 * _globalCoeff;
@@ -146,10 +145,10 @@ public class CardGame : MonoBehaviour
         {
             _links++;
         }
-        else 
+        else
             return;
 
-            int rd = Random.Range(0, 100);
+        int rd = Random.Range(0, 100);
 
         switch (_links)
         {
@@ -161,6 +160,7 @@ public class CardGame : MonoBehaviour
                     GameManager.Instance?.IncrementAngryMeter();
 
                 GameManager.Instance?.MonsterAngryMeterDice();
+                AudioManager.Instance.PlaySFX(SoundType.LiaisonCarte);
                 break;
 
             case 2:
@@ -169,6 +169,7 @@ public class CardGame : MonoBehaviour
                     GameManager.Instance?.IncrementAngryMeter();
 
                 GameManager.Instance?.MonsterAngryMeterDice();
+                AudioManager.Instance.PlaySFX(SoundType.LiaisonCarte);
                 break;
             case 3:
                 Debug.Log("Anger" + ThreeLinksCoeff);
@@ -176,6 +177,7 @@ public class CardGame : MonoBehaviour
                     GameManager.Instance?.IncrementAngryMeter();
 
                 GameManager.Instance?.MonsterAngryMeterDice();
+                AudioManager.Instance.PlaySFX(SoundType.LiaisonCarte);
                 break;
             case 4:
                 Debug.Log("Anger" + FourLinksCoeff);
@@ -183,6 +185,7 @@ public class CardGame : MonoBehaviour
                     GameManager.Instance?.IncrementAngryMeter();
 
                 GameManager.Instance?.MonsterAngryMeterDice();
+                AudioManager.Instance.PlaySFX(SoundType.LiaisonCarte);
                 break;
             case 5:
                 Debug.Log("Anger" + FiveLinksCoeff);
@@ -190,20 +193,22 @@ public class CardGame : MonoBehaviour
                     GameManager.Instance?.IncrementAngryMeter();
 
                 GameManager.Instance?.MonsterAngryMeterDice();
+                AudioManager.Instance.PlaySFX(SoundType.LiaisonCarte);
                 break;
             default:
                 Debug.Log("Anger > 5");
                 GameManager.Instance?.IncrementAngryMeter();
                 GameManager.Instance?.MonsterAngryMeterDice();
+                AudioManager.Instance.PlaySFX(SoundType.LiaisonCarte);
                 break;
-
         }
+        AudioManager.Instance.PlaySFX(SoundType.CarteEmpilee);
     }
 
     private void PrepareArenaForNextCombo()
     {
         // update previous card with last card
-        if(_previousCard) Destroy(_previousCard.gameObject);
+        if (_previousCard) Destroy(_previousCard.gameObject);
         _previousCard = _arena[_arena.Count - 1];
 
         // delete all except the last one
@@ -235,7 +240,7 @@ public class CardGame : MonoBehaviour
         controller.transform.SetParent(_playedCardsParent, true);
         controller.transform.position = new Vector3(controller.transform.position.x, controller.transform.position.y + 75, controller.transform.position.z); // up
 
-        if(hand.Count >= 2)
+        if (hand.Count >= 2)
         {
             CardManager.Instance.CanInteract = false;
             Invoke("PlayCards", 0.5f);
@@ -290,4 +295,4 @@ public class CardGame : MonoBehaviour
     }
 
 
-    }
+}

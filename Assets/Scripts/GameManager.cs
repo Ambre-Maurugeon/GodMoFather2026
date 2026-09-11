@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
 
         CardManager.Instance?.CreateDeck();
         StartCoroutine("StartGame");
+        AudioManager.Instance.PlayMusic(SoundType.MainTheme);
     }
 
     IEnumerator StartGame()
@@ -106,9 +107,11 @@ public class GameManager : MonoBehaviour
         else if (_isPlayer2Turn)
             _player2Score += score;
 
+        if (score != 0)
+            AudioManager.Instance.PlaySFX(SoundType.PointsPerdus);
         UpdateText();
     }
-    
+
     public void PlayTurn()
     {
         if (_isPlayer1Turn && !_isPlayer2Turn)
@@ -120,7 +123,7 @@ public class GameManager : MonoBehaviour
             ChangePlayerTurn(1);
         }
         //_monsterAngryMeter++;
-       
+
         //MonsterAngryMeterDice(_monsterAngryMeter);
         UpdateText();
     }
@@ -172,7 +175,7 @@ public class GameManager : MonoBehaviour
     {
         monsterAngryMeter.SetMeter(this._monsterAngryMeter);
 
-        if (_monsterAngryMeter <= 0) return ;
+        if (_monsterAngryMeter <= 0) return;
 
         int[] results = new int[_monsterAngryMeter];
         bool hasSix7 = false;
@@ -203,6 +206,7 @@ public class GameManager : MonoBehaviour
     }
     private void HandleDodgeResult(int lostScore)
     {
+        if (lostScore != 0) AudioManager.Instance.PlaySFX(SoundType.PointsPerdus);
         dodgeGame.OnGameEnded -= HandleDodgeResult;
 
         // Reverse removing score (it's the other's turn)

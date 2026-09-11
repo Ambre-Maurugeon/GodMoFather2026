@@ -10,6 +10,7 @@ public class PlayerCollision : MonoBehaviour
         if (collision.CompareTag("Card"))
         {
             OnCardHit?.Invoke(collision.gameObject);
+            AudioManager.Instance.PlaySFX(SoundType.PointsPerdus);
         }
     }
 }
