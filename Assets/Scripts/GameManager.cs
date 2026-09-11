@@ -19,23 +19,9 @@ public class GameManager : MonoBehaviour
     [Header("SCORE")]
     private int _player1Score = 0;
     private int _player2Score = 0;
-<<<<<<< Updated upstream
-    private bool _isPlayer1Turn = false;
-=======
     private int _player1Multiplier = 1;
     private int _player2Multiplier = 1;
-    private bool _isPlayer1Turn
-    {
-        get { return testJ1; }
-        set
-        {
-            testJ1 = value;
-            Debug.Log($"is player turn {testJ1} ");
-        }
-    }
-
-    private bool testJ1 = false;
->>>>>>> Stashed changes
+    private bool _isPlayer1Turn = false;
     private bool _isPlayer2Turn = false;
     [SerializeField] private int _scoreGoal = 1000; //1k
 
@@ -135,6 +121,7 @@ public class GameManager : MonoBehaviour
             player2MultiText.text = "x" +  _player2Multiplier.ToString();
         }
     }
+
 
     public void PlayTurn()
     {
@@ -263,7 +250,12 @@ public class GameManager : MonoBehaviour
             currentTurnText.text = "Player 2's turn";
         }
     }
-<<<<<<< Updated upstream
+
+    public void ResetMultiplicators()
+    {
+        _player1Multiplier = 1;
+        _player2Multiplier = 1;
+    }
     public int WhosTurn()
     {
         if (_isPlayer1Turn && !_isPlayer2Turn)
@@ -272,12 +264,6 @@ public class GameManager : MonoBehaviour
             return 2;
         else
             return 0;
-=======
-
-    public void ResetMultiplicators()
-    {
-        _player1Multiplier = 1;
-        _player2Multiplier = 1;
->>>>>>> Stashed changes
     }
+
 }

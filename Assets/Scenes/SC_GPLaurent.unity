@@ -474,9 +474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Multi J2
-
-'
+  m_text: x2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -761,6 +759,8 @@ MonoBehaviour:
   player1ScoreText: {fileID: 668401101}
   player2ScoreText: {fileID: 1964827857}
   scoreGoalText: {fileID: 652214484}
+  player1MultiText: {fileID: 930119306}
+  player2MultiText: {fileID: 254814915}
   angryMeterText: {fileID: 0}
   diceResultText: {fileID: 660755626}
   iconPlayer1: {fileID: 452064331}
@@ -2880,7 +2880,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Multi J1
+  m_text: x1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3228,8 +3228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4855d8006d990e48a1a7eaa118ff9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
-  P1: {fileID: -2856072534722823855, guid: 658859dee37d9f749ba31fed3864fc69, type: 3}
-  P2: {fileID: 2138651463138402081, guid: ecd6f436b682f0c4b8a07d7b4ad45b8c, type: 3}
+  P1: {fileID: 0}
+  P2: {fileID: 0}
 --- !u!70 &1000764712
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4678,8 +4678,6 @@ MonoBehaviour:
   ThreeLinksCoeff: 0.4
   FourLinksCoeff: 0.6
   FiveLinksCoeff: 0.8
-  _textMultiplicateurJ1: {fileID: 930119306}
-  _textMultiplicateurJ2: {fileID: 254814915}
   _globalCoeff: 10
   _basicCombo: 1
   _jackCombo: 2
