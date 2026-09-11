@@ -1,7 +1,10 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using NaughtyAttributes;
 using NUnit.Framework;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CardGame : MonoBehaviour
@@ -11,22 +14,34 @@ public class CardGame : MonoBehaviour
     public static CardGame Instance => _instance;
     #endregion
 
-    //CardData[] arena= new CardData[2];
-
+    // -- ARENA --
     List<CardController> arena = new();
-    // previousCard 
-
-    List<CardController> hand = new();
+    CardController previousCard;
 
     [SerializeField] private Transform _playedCard01;
     [SerializeField] private Transform _playedCard02;
+    [SerializeField] private Transform _playedCard03;
 
-    [SerializeField]private Transform _arenaParent;
+    [SerializeField]private Transform _playedCardsParent;
 
-    [SerializeField] private int _jackCombo = 1;
-    [SerializeField] private int _knightCombo = 2;
-    [SerializeField] private int _queenCombo = 3;
-    [SerializeField] private int _kingCombo = 4;
+    // -- HAND --
+
+    List<CardController> hand = new();
+
+    // -- SCORE --
+    [Header("Score")]
+    [SerializeField] private TextMeshProUGUI _textScoreJ1;
+    [SerializeField] private TextMeshProUGUI _textScoreJ2;
+    private int _scoreJ1;
+    private int _scoreJ2;
+
+    // -- COMBO --
+    [Header("Combos")]
+    [SerializeField] private int _basicCombo = 1;
+    [SerializeField] private int _jackCombo = 2;
+    [SerializeField] private int _knightCombo = 3;
+    [SerializeField] private int _queenCombo = 4;
+    [SerializeField] private int _kingCombo = 5;
 
 
     #region Main
@@ -43,17 +58,9 @@ public class CardGame : MonoBehaviour
     }
     #endregion
 
-    public void AddInArena(CardController controller)
-    {
-        arena.Add(controller);
-
-        if (arena.Count == 2) 
-            Combo();
-
-    }
-
     private void Combo()
     {
+        
         //Debug.Log("Combo");
 
         // oudler TO EDIT
@@ -67,36 +74,62 @@ public class CardGame : MonoBehaviour
         int cardNumber01 = arena[0].MyData.CardNumber;
         int cardNumber02 = arena[1].MyData.CardNumber;
 
+        Debug.Log(cardNumber01 + "," + cardNumber02);
+
         int[] cardNumbers = new int[] { cardNumber01, cardNumber02 };
 
-        int tempoScore = 0;
+        int tempoScore = _scoreJ1;
 
         //none
         if (cardNumber01 <= 10 && cardNumber02 <= 10)
-            tempoScore++;
+            tempoScore+= _basicCombo;
         // king
-        else if (cardNumbers.Contains(14))
+        else if (cardNumbers.Contains(50))
             tempoScore += _kingCombo;
         // queen
-        else if (cardNumbers.Contains(13))
+        else if (cardNumbers.Contains(40))
             tempoScore += _queenCombo;
         //knight
-        else if (cardNumbers.Contains(12))
+        else if (cardNumbers.Contains(30))
             tempoScore += _knightCombo;
         //jack
-        else if (cardNumbers.Contains(11))
+        else if (cardNumbers.Contains(20))
             tempoScore += _jackCombo;
 
+        _scoreJ1 = tempoScore;
+        _textScoreJ1.text = tempoScore.ToString();
 
+        // finir le pli
+        Invoke("PrepareArenaForNextCombo", 1.5f);
+    }
+
+    private void PrepareArenaForNextCombo()
+    {
+        if(previousCard) Destroy(previousCard.gameObject);
+
+        previousCard = arena[arena.Count - 1];
+
+        // delete all except the last one
+        for (int i = 0; i < arena.Count - 1; i++)
+        {
+            Destroy(arena[i].gameObject);
+        }
+
+        previousCard.transform.position = _playedCard01.position;
+
+        // clear
+        arena.Clear();
+        ClearHand();
 
     }
+
 
     public void SelectCard(CardController controller)
     {
         if (hand.Count >= 2) return;
 
         hand.Add(controller);
-        controller.transform.SetParent(_arenaParent, true);
+        controller.transform.SetParent(_playedCardsParent, true);
         controller.transform.position = new Vector3(controller.transform.position.x, controller.transform.position.y + 75, controller.transform.position.z); // up
 
         if(hand.Count >=2)
@@ -111,20 +144,31 @@ public class CardGame : MonoBehaviour
 
     private void PlayCards()
     {
-        ClearArena();
-
         arena = new List<CardController>(hand);
 
         // Visuals => move card to the middle
-        hand[0].transform.position = _playedCard01.position;
-        hand[1].transform.position = _playedCard02.position;
+        // can do a list of place card
+        if (!previousCard)
+        {
+            hand[0].transform.position = _playedCard01.position;
+            hand[1].transform.position = _playedCard02.position;
+        }
+        else
+        {
+            hand[0].transform.position = _playedCard02.position;
+            hand[1].transform.position = _playedCard03.position;
+        }
 
         // Combo Count
         Combo();
     }
 
+    [Button]
     private void ClearArena()
     {
+        foreach (var c in arena)
+            Destroy(c.gameObject);
+
         arena.Clear();
     }
 

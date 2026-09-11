@@ -13,6 +13,7 @@ public class CardManager : MonoBehaviour
     [SerializeField] private CardDatabaseManager _dbMgr;
 
     [Foldout("References"), SerializeField] private GameObject _deckParent;
+    [Foldout("References"), SerializeField] private GameObject _cardsParent;
     [Foldout("References"), SerializeField] private GameObject _cardPref;
 
     #endregion
@@ -96,15 +97,20 @@ public class CardManager : MonoBehaviour
     {
         ClearDeck();
 
-        // fill deck
+        // -- FILL DECK --
         for(int i = 0; i < _deckCount; i++)
         {
-            // get rd
+            // -- GET RD --
             CardData rdCard = GetRandomCard();
 
-            // add rd
+            // -- ADD RD --
             _deck.Add(rdCard);
-            CardController controller = Instantiate(_cardPref, _deckParent.transform).GetComponent<CardController>();
+            CardController controller = Instantiate(_cardPref, _cardsParent.transform).GetComponent<CardController>();
+
+            // place card at the right position in the deck
+            Transform[] places = _deckParent.GetComponentsInChildren<Transform>();
+            controller.transform.position = places[i+1].position;
+
             controller.UpdateCardInfo(rdCard);
 
         }
@@ -161,7 +167,7 @@ public class CardManager : MonoBehaviour
     {
        _deck.Clear();
 
-        foreach (Transform child in _deckParent.transform)
+        foreach (Transform child in _cardsParent.transform)
             Destroy(child.gameObject);
     }
 

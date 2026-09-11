@@ -11,8 +11,8 @@ public enum CARD_TYPE
 public enum CARD_COLOR
 {
     NONE = 0,
-    RED = 1,
-    BLACK = 2,
+    SUN = 1,
+    MOON = 2,
 }
 
 public enum GameState
