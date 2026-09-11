@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    #region Instance
+    private static GameManager _instance;
+    public static GameManager Instance => _instance;
+    #endregion
+
     private bool isGameOn = false;
     private int _monsterAngryMeter = 0;
     [SerializeField] private DodgeGame dodgeGame;
@@ -12,7 +17,17 @@ public class GameManager : MonoBehaviour
     [Header("SCORE")]
     [SerializeField] private int _player1Score = 0;
     [SerializeField] private int _player2Score = 0;
-    private bool _isPlayer1Turn = false;
+    private bool _isPlayer1Turn
+    {
+        get { return testJ1; }
+        set
+        {
+            testJ1 = value;
+            Debug.Log($"is player turn {testJ1} ");
+        }
+    }
+
+    private bool testJ1 = false;
     private bool _isPlayer2Turn = false;
     [SerializeField] private int _scoreGoal = 1000; //1k
 
@@ -29,15 +44,29 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Color myTurnColor;
     [SerializeField] private Color afkColor;
 
-    public void Start()
+    private void Awake()
+    {
+        // Instance
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+            _instance = this;
+    }
+
+    void Start()
     {
         dodgeGame = FindFirstObjectByType<DodgeGame>();
         monsterAngryMeter = FindFirstObjectByType<MonsterAngryMeter>();
 
         isGameOn = true;
-        CardManager.Instance?.CreateDeck();
+
         _isPlayer1Turn = true;
         _isPlayer2Turn = false;
+
+        CardManager.Instance?.CreateDeck();
         StartCoroutine("StartGame");
     }
 
@@ -69,22 +98,36 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
     }
+
+    public void UpdateScore(int score)
+    {
+        if (_isPlayer1Turn)
+            _player1Score += score;
+        else if (_isPlayer2Turn)
+            _player2Score += score;
+
+        UpdateText();
+    }
+    
     public void PlayTurn()
     {
         if (_isPlayer1Turn && !_isPlayer2Turn)
         {
-            _player1Score += 100;
             ChangePlayerTurn(2);
         }
         else if (_isPlayer2Turn && !_isPlayer1Turn)
         {
-            _player2Score += 100;
             ChangePlayerTurn(1);
         }
-        _monsterAngryMeter++;
-        monsterAngryMeter.SetMeter(_monsterAngryMeter);
-        MonsterAngryMeterDice(_monsterAngryMeter);
+        //_monsterAngryMeter++;
+       
+        //MonsterAngryMeterDice(_monsterAngryMeter);
         UpdateText();
+    }
+    public void IncrementAngryMeter()
+    {
+        _monsterAngryMeter++;
+
     }
     void ChangePlayerTurn(int changeTo)
     {
@@ -125,13 +168,16 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
-    int[] MonsterAngryMeterDice(int multiplier)
+    public void MonsterAngryMeterDice()
     {
-        if (multiplier <= 0) return new int[0];
-        int[] results = new int[multiplier];
+        monsterAngryMeter.SetMeter(this._monsterAngryMeter);
+
+        if (_monsterAngryMeter <= 0) return ;
+
+        int[] results = new int[_monsterAngryMeter];
         bool hasSix7 = false;
 
-        for (int i = 0; i < multiplier; i++)
+        for (int i = 0; i < _monsterAngryMeter; i++)
         {
             results[i] = Random.Range(1, 7);
 
@@ -144,7 +190,7 @@ public class GameManager : MonoBehaviour
         if (hasSix7)
         {
             Debug.Log("Prepare to dodge !");
-            _monsterAngryMeter = 0;
+            this._monsterAngryMeter = 0;
             DodgeGame.scoreLost = 0;
 
             dodgeGame.OnGameEnded += HandleDodgeResult;
@@ -152,7 +198,6 @@ public class GameManager : MonoBehaviour
         }
         if (diceResultText != null)
             diceResultText.text = "Dice roll : " + string.Join(", ", results);
-        return results;
     }
     private void HandleDodgeResult(int lostScore)
     {

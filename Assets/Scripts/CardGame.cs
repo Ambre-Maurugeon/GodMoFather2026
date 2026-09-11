@@ -45,19 +45,18 @@ public class CardGame : MonoBehaviour
 
     // ---- SCORE ----
     [Header("Score")]
-    [SerializeField] private TextMeshProUGUI _textScoreJ1;
-    [SerializeField] private TextMeshProUGUI _textScoreJ2;
+    //[SerializeField] private TextMeshProUGUI _textScoreJ1;
+    //[SerializeField] private TextMeshProUGUI _textScoreJ2;
 
     [Space(10)]
     [SerializeField] private TextMeshProUGUI _textMultiplicateurJ1;
     [SerializeField] private TextMeshProUGUI _textMultiplicateurJ2;
-    private int _scoreJ1;
-    private int _scoreJ2;
     private int _multiplicatorJ1 = 1;
     private int _multiplicatorJ2 = 1;
 
     // ---- COMBO ----
     [Header("Combos")]
+    [Foldout("Combos"), SerializeField] private int _globalCoeff = 10;
     [Foldout("Combos"), SerializeField] private int _basicCombo = 1;
     [Foldout("Combos"), SerializeField] private int _jackCombo = 2;
     [Foldout("Combos"), SerializeField] private int _knightCombo = 3;
@@ -112,28 +111,25 @@ public class CardGame : MonoBehaviour
 
         int[] cardNumbers = new int[] { cardNumber01, cardNumber02 };
 
-        // if J1isPlaying or if J2isPlaying
-        int tempoScore = _scoreJ1;
+        int tempoScore = 0;
 
         //none
         if (cardNumber01 <= 10 && cardNumber02 <= 10)
-            tempoScore+= _basicCombo * _multiplicatorJ1;
+            tempoScore+= _basicCombo * _multiplicatorJ1 * _globalCoeff;
         // king
         else if (cardNumbers.Contains(50))
-            tempoScore += _kingCombo * _multiplicatorJ1;
+            tempoScore += _kingCombo * _multiplicatorJ1 * _globalCoeff;
         // queen
         else if (cardNumbers.Contains(40))
-            tempoScore += _queenCombo * _multiplicatorJ1;
+            tempoScore += _queenCombo * _multiplicatorJ1 * _globalCoeff;
         //knight
         else if (cardNumbers.Contains(30))
-            tempoScore += _knightCombo * _multiplicatorJ1;
+            tempoScore += _knightCombo * _multiplicatorJ1 * _globalCoeff;
         //jack
         else if (cardNumbers.Contains(20))
-            tempoScore += _jackCombo * _multiplicatorJ1;
+            tempoScore += _jackCombo * _multiplicatorJ1 * _globalCoeff;
 
-        // if J1isPlaying or if J2isPlaying
-        _scoreJ1 = tempoScore;
-        _textScoreJ1.text = _scoreJ1.ToString();
+        GameManager.Instance?.UpdateScore(tempoScore);
 
         // clean arena and keep last card
         Invoke("PrepareArenaForNextCombo", 1.5f);
@@ -150,24 +146,55 @@ public class CardGame : MonoBehaviour
         {
             _links++;
         }
+        else 
+            return;
+
+            int rd = Random.Range(0, 100);
 
         switch (_links)
         {
+            case 0: // don't pass here 
+                break;
             case 1:
                 Debug.Log("Anger" + OneLinkCoeff);
+                if (rd <= 60)
+                    GameManager.Instance?.IncrementAngryMeter();
+
+                GameManager.Instance?.MonsterAngryMeterDice();
                 break;
 
             case 2:
                 Debug.Log("Anger" + TwoLinksCoeff);
+                if (rd <= 65)
+                    GameManager.Instance?.IncrementAngryMeter();
+
+                GameManager.Instance?.MonsterAngryMeterDice();
                 break;
             case 3:
                 Debug.Log("Anger" + ThreeLinksCoeff);
+                if (rd <= 70)
+                    GameManager.Instance?.IncrementAngryMeter();
+
+                GameManager.Instance?.MonsterAngryMeterDice();
                 break;
             case 4:
                 Debug.Log("Anger" + FourLinksCoeff);
+                if (rd <= 75)
+                    GameManager.Instance?.IncrementAngryMeter();
+
+                GameManager.Instance?.MonsterAngryMeterDice();
                 break;
             case 5:
                 Debug.Log("Anger" + FiveLinksCoeff);
+                if (rd <= 80)
+                    GameManager.Instance?.IncrementAngryMeter();
+
+                GameManager.Instance?.MonsterAngryMeterDice();
+                break;
+            default:
+                Debug.Log("Anger > 5");
+                GameManager.Instance?.IncrementAngryMeter();
+                GameManager.Instance?.MonsterAngryMeterDice();
                 break;
 
         }
@@ -193,6 +220,9 @@ public class CardGame : MonoBehaviour
         ClearHand();
 
         CardManager.Instance?.CloseRound();
+
+        // Next Round
+        GameManager.Instance?.PlayTurn();
 
     }
 

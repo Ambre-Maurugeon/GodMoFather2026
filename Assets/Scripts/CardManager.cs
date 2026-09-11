@@ -123,7 +123,7 @@ public class CardManager : MonoBehaviour
 
     private CardData GetRandomCard()
     {
-        CardData rdCard;
+        CardData rdCard = null;
         int r = Random.Range(0, 100);
 
         if (r < 5 && _oudlers.Count!=0)
@@ -156,7 +156,7 @@ public class CardManager : MonoBehaviour
             int rd = Random.Range(0, _jacks.Count);
             rdCard = _jacks[rd];
         }
-        else
+        else if (_basics.Count != 0)
         // rd ds basics
         {
             int rd = Random.Range(0, _basics.Count);
