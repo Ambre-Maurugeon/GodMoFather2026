@@ -21,7 +21,7 @@ public class CardController : MonoBehaviour, IPointerClickHandler
     public void UpdateCardInfo(CardData data)
     {
         _myData = data;
-        _img.sprite =  _myData.Sprite;
+        _img.sprite = _myData.Sprite;
     }
 
     #region Click
@@ -31,17 +31,19 @@ public class CardController : MonoBehaviour, IPointerClickHandler
     {
         if (!CardManager.Instance.CanInteract) return;
 
-        if(_isSelected)
+        if (_isSelected)
         {
             _isSelected = false;
             CardGame.Instance?.RemoveCard(this);
+            AudioManager.Instance.PlaySFX(SoundType.AudioCardDeselect);
         }
         else
         {
             _isSelected = true;
             CardGame.Instance?.SelectCard(this);
+            AudioManager.Instance.PlaySFX(SoundType.AudioCardSelect);
         }
     }
-    
+
     #endregion
-    }
+}

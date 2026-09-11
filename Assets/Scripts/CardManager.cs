@@ -29,10 +29,10 @@ public class CardManager : MonoBehaviour
     private List<CardData> _jacks = new List<CardData>();
     private List<CardData> _knights = new List<CardData>();
     private List<CardData> _queens = new List<CardData>();
-    private List<CardData> _kings = new List<CardData>();   
+    private List<CardData> _kings = new List<CardData>();
     private List<CardData> _oudlers = new List<CardData>();
 
-    public bool CanInteract { get;set; }
+    public bool CanInteract { get; set; }
 
 
     #endregion
@@ -59,7 +59,7 @@ public class CardManager : MonoBehaviour
         CanInteract = true;
     }
     #endregion
-    
+
 
     private void SortCardsByType()
     {
@@ -102,7 +102,7 @@ public class CardManager : MonoBehaviour
         ClearDeck();
 
         // -- FILL DECK --
-        for(int i = 0; i < _deckCount; i++)
+        for (int i = 0; i < _deckCount; i++)
         {
             // -- GET RD --
             CardData rdCard = GetRandomCard();
@@ -113,12 +113,12 @@ public class CardManager : MonoBehaviour
 
             // place card at the right position in the deck
             Transform[] places = _deckParent.GetComponentsInChildren<Transform>();
-            controller.transform.position = places[i+1].position;
+            controller.transform.position = places[i + 1].position;
 
             controller.UpdateCardInfo(rdCard);
 
+            AudioManager.Instance.PlaySFX(SoundType.AudioCardDraw);
         }
-
     }
 
     private CardData GetRandomCard()
@@ -126,7 +126,7 @@ public class CardManager : MonoBehaviour
         CardData rdCard = null;
         int r = Random.Range(0, 100);
 
-        if (r < 5 && _oudlers.Count!=0)
+        if (r < 5 && _oudlers.Count != 0)
         // rd ds oudler
         {
             int rd = Random.Range(0, _oudlers.Count);
@@ -175,7 +175,7 @@ public class CardManager : MonoBehaviour
 
     public void ClearDeck()
     {
-       _deck.Clear();
+        _deck.Clear();
 
         foreach (Transform child in _cardsParent.transform)
             Destroy(child.gameObject);
@@ -183,7 +183,7 @@ public class CardManager : MonoBehaviour
 
     private void CheckDeckCount()
     {
-        if(_cardsParent.GetComponentsInChildren<Transform>().Length<=1)
+        if (_cardsParent.GetComponentsInChildren<Transform>().Length <= 1)
             CreateDeck();
     }
 
