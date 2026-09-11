@@ -157,6 +157,7 @@ public class DodgeGame : MonoBehaviour
         AudioManager.Instance.PlayMusic(SoundType.MiniJeu);
         if (_isGameRunning || _isTransitioning) return;
         CardGame.Instance?.HidePreviousCard(true);
+        GameManager.isMiniGameOn = true;
         StartCoroutine(StartSequenceRoutine());
     }
 
@@ -170,6 +171,7 @@ public class DodgeGame : MonoBehaviour
         if (!_isGameRunning && !_isTransitioning) return;
         StartCoroutine(StopSequenceRoutine());
         CardGame.Instance?.HidePreviousCard(false);
+        GameManager.isMiniGameOn = false;
 
         OnGameEnded?.Invoke(DodgeGame.scoreLost);
     }

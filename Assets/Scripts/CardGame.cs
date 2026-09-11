@@ -131,7 +131,11 @@ public class CardGame : MonoBehaviour
         GameManager.Instance?.UpdateScore(tempoScore);
 
         // clean arena and keep last card
-        Invoke("PrepareArenaForNextCombo", 1.5f);
+
+        if (GameManager.isMiniGameOn == false)
+            Invoke("PrepareArenaForNextCombo", 1.5f);
+        else
+            PrepareArenaForNextCombo();
     }
 
     private void CheckPreviousCard()
