@@ -48,7 +48,8 @@ public class MonsterAngryMeter : MonoBehaviour
         while (i != meters)
         {
             i++;
-            Create();
+            if (meters < 5)
+                Create();
         }
     }
 }

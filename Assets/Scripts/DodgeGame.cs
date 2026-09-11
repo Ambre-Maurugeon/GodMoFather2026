@@ -66,6 +66,8 @@ public class DodgeGame : MonoBehaviour
     [Header("Player Intro/Outro Anim")]
     [SerializeField] private float playerEntryOffsetY = 6f;
     [SerializeField] private float playerAnimDuration = 0.4f;
+    [SerializeField] private GameObject monsterFalse;
+    [SerializeField] private GameObject monsterTrue;
 
     [Header("Cards")]
     [SerializeField] private GameObject cardPrefab;
@@ -148,6 +150,8 @@ public class DodgeGame : MonoBehaviour
 
     public void StartGame()
     {
+        monsterFalse.SetActive(false);
+        monsterTrue.SetActive(true);
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlaySFX(SoundType.MonsterGrowl);
         AudioManager.Instance.PlayMusic(SoundType.MiniJeu);
@@ -157,6 +161,8 @@ public class DodgeGame : MonoBehaviour
 
     public void StopGame()
     {
+        monsterFalse.SetActive(true);
+        monsterTrue.SetActive(false);
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlaySFX(SoundType.MonsterGrowl);
         AudioManager.Instance.PlayMusic(SoundType.MainTheme);

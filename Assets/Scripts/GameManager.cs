@@ -223,11 +223,11 @@ public class GameManager : MonoBehaviour
         if (scoreGoalText != null)
             scoreGoalText.text = $"Goal {_scoreGoal}";
         if (player1ScoreText != null)
-            player1ScoreText.text = $"Player 1's score : {_player1Score}";
+            player1ScoreText.text = $"{_player1Score}";
         if (player2ScoreText != null)
-            player2ScoreText.text = $"Player 2's score : {_player2Score}";
+            player2ScoreText.text = $"{_player2Score}";
         if (angryMeterText != null)
-            angryMeterText.text = $"Monster's angry meter : {_monsterAngryMeter}";
+            angryMeterText.text = $"Angry meter : {_monsterAngryMeter}";
 
         // Player's turn
         if (_isPlayer1Turn && !_isPlayer2Turn)
