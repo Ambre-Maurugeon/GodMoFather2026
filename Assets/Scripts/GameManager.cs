@@ -1,12 +1,14 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     private bool isGameOn = false;
     private int _monsterAngryMeter = 0;
     [SerializeField] private DodgeGame dodgeGame;
+    [SerializeField] private MonsterAngryMeter monsterAngryMeter;
     [Header("SCORE")]
     [SerializeField] private int _player1Score = 0;
     [SerializeField] private int _player2Score = 0;
@@ -21,11 +23,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreGoalText;
     [SerializeField] private TextMeshProUGUI angryMeterText;
     [SerializeField] private TextMeshProUGUI diceResultText;
-
+    [Header("Colors")]
+    [SerializeField] private GameObject iconPlayer1;
+    [SerializeField] private GameObject iconPlayer2;
+    [SerializeField] private Color myTurnColor;
+    [SerializeField] private Color afkColor;
 
     public void Start()
     {
         dodgeGame = FindFirstObjectByType<DodgeGame>();
+        monsterAngryMeter = FindFirstObjectByType<MonsterAngryMeter>();
 
         isGameOn = true;
         _isPlayer1Turn = true;
@@ -46,11 +53,11 @@ public class GameManager : MonoBehaviour
                 Debug.Log($"Winner is {winner}");
             }
 
-            if (_isPlayer1Turn)
+            if (_isPlayer1Turn && !_isPlayer2Turn)
             {
                 // PlayTurn();
             }
-            else if (_isPlayer2Turn)
+            else if (_isPlayer2Turn && !_isPlayer1Turn)
             {
                 // PlayTurn();
             }
@@ -64,16 +71,15 @@ public class GameManager : MonoBehaviour
         {
             _player1Score += 100;
             ChangePlayerTurn(2);
-            Debug.Log($"Player 1 got 100 scores {_player1Score}");
         }
         else if (_isPlayer2Turn && !_isPlayer1Turn)
         {
             _player2Score += 100;
             ChangePlayerTurn(1);
-            Debug.Log($"Player 1 got 100 scores {_player2Score}");
         }
-        MonsterAngryMeter(_monsterAngryMeter);
         _monsterAngryMeter++;
+        monsterAngryMeter.SetMeter(_monsterAngryMeter);
+        MonsterAngryMeterDice(_monsterAngryMeter);
         UpdateText();
     }
     void ChangePlayerTurn(int changeTo)
@@ -83,23 +89,39 @@ public class GameManager : MonoBehaviour
             case 0:
                 _isPlayer1Turn = false;
                 _isPlayer2Turn = false;
+                if (iconPlayer1 != null)
+                    iconPlayer1.GetComponent<Image>().color = afkColor;
+                if (iconPlayer2 != null)
+                    iconPlayer2.GetComponent<Image>().color = afkColor;
                 break;
             case 1:
                 _isPlayer1Turn = true;
                 _isPlayer2Turn = false;
+                if (iconPlayer1 != null)
+                    iconPlayer1.GetComponent<Image>().color = myTurnColor;
+                if (iconPlayer2 != null)
+                    iconPlayer2.GetComponent<Image>().color = afkColor;
                 break;
             case 2:
                 _isPlayer1Turn = false;
                 _isPlayer2Turn = true;
+                if (iconPlayer1 != null)
+                    iconPlayer1.GetComponent<Image>().color = afkColor;
+                if (iconPlayer2 != null)
+                    iconPlayer2.GetComponent<Image>().color = myTurnColor;
                 break;
             default:
                 _isPlayer1Turn = true;
                 _isPlayer2Turn = false;
+                if (iconPlayer1 != null)
+                    iconPlayer1.GetComponent<Image>().color = myTurnColor;
+                if (iconPlayer2 != null)
+                    iconPlayer2.GetComponent<Image>().color = afkColor;
                 Debug.Log($"{changeTo} is not valid");
                 break;
         }
     }
-    int[] MonsterAngryMeter(int multiplier)
+    int[] MonsterAngryMeterDice(int multiplier)
     {
         if (multiplier <= 0) return new int[0];
         int[] results = new int[multiplier];
@@ -119,11 +141,27 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Prepare to dodge !");
             _monsterAngryMeter = 0;
+            DodgeGame.scoreLost = 0;
+
+            dodgeGame.OnGameEnded += HandleDodgeResult;
             dodgeGame.StartGame();
         }
         if (diceResultText != null)
             diceResultText.text = "Dice roll : " + string.Join(", ", results);
         return results;
+    }
+    private void HandleDodgeResult(int lostScore)
+    {
+        dodgeGame.OnGameEnded -= HandleDodgeResult;
+
+        // Reverse removing score (it's the other's turn)
+        if (_isPlayer1Turn && !_isPlayer2Turn)
+            _player2Score -= lostScore;
+        if (!_isPlayer1Turn && _isPlayer2Turn)
+            _player1Score -= lostScore;
+
+        Debug.Log($"Total Lost: {DodgeGame.scoreLost}");
+        UpdateText();
     }
     void UpdateText()
     {
