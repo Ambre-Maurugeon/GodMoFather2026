@@ -1,0 +1,1781 @@
+fileFormatVersion: 2
+guid: 3f02f6074c26d2c478444e69f9dd7a58
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7280572489434749486
+    second: T_Fou_0
+  - first:
+      213: 9014138124700307812
+    second: T_Fou_1
+  - first:
+      213: -2259181450820698453
+    second: T_Fou_2
+  - first:
+      213: 3752020861185188458
+    second: T_Fou_3
+  - first:
+      213: -2625232813546063777
+    second: T_Fou_4
+  - first:
+      213: 7696174752008025045
+    second: T_Fou_5
+  - first:
+      213: 8840829642500231907
+    second: T_Fou_6
+  - first:
+      213: -4511224221360742316
+    second: T_Fou_7
+  - first:
+      213: 8088855431015996052
+    second: T_Fou_8
+  - first:
+      213: 8085978481649484436
+    second: T_Fou_9
+  - first:
+      213: 3701824083705398558
+    second: T_Fou_10
+  - first:
+      213: -1099282103766157777
+    second: T_Fou_11
+  - first:
+      213: 1698858577768291162
+    second: T_Fou_12
+  - first:
+      213: -4038575456814667906
+    second: T_Fou_13
+  - first:
+      213: -2226073127088522480
+    second: T_Fou_14
+  - first:
+      213: 4898151450745339036
+    second: T_Fou_15
+  - first:
+      213: 321543596588745289
+    second: T_Fou_16
+  - first:
+      213: -4104128543263322438
+    second: T_Fou_17
+  - first:
+      213: 922989850225317417
+    second: T_Fou_18
+  - first:
+      213: -5200849529776044177
+    second: T_Fou_19
+  - first:
+      213: 8588242520912954288
+    second: T_Fou_20
+  - first:
+      213: 6304903584566553773
+    second: T_Fou_21
+  - first:
+      213: -8586534768088139125
+    second: T_Fou_22
+  - first:
+      213: 3060833616562975752
+    second: T_Fou_23
+  - first:
+      213: -7544591639967491771
+    second: T_Fou_24
+  - first:
+      213: 4158263052302957094
+    second: T_Fou_25
+  - first:
+      213: 8728193084325223766
+    second: T_Fou_26
+  - first:
+      213: -7910492891044415632
+    second: T_Fou_27
+  - first:
+      213: 7007841034474312816
+    second: T_Fou_28
+  - first:
+      213: -1452602968248506651
+    second: T_Fou_29
+  - first:
+      213: -4184453860466870053
+    second: T_Fou_30
+  - first:
+      213: -927826219210548117
+    second: T_Fou_31
+  - first:
+      213: -9091242283578450552
+    second: T_Fou_32
+  - first:
+      213: -8552805658799820930
+    second: T_Fou_33
+  - first:
+      213: 3392164548469241067
+    second: T_Fou_34
+  - first:
+      213: -6225557975497843347
+    second: T_Fou_35
+  - first:
+      213: 3822301340570068048
+    second: T_Fou_36
+  - first:
+      213: -2085928970219379406
+    second: T_Fou_37
+  - first:
+      213: -7927191517990365946
+    second: T_Fou_38
+  - first:
+      213: -6425935905664977830
+    second: T_Fou_39
+  - first:
+      213: 622028568933613250
+    second: T_Fou_40
+  - first:
+      213: 8580952300421154178
+    second: T_Fou_41
+  - first:
+      213: 5784389136553312578
+    second: T_Fou_42
+  - first:
+      213: -3859374829056940200
+    second: T_Fou_43
+  - first:
+      213: 1065504499003076941
+    second: T_Fou_44
+  - first:
+      213: -6171962897067241568
+    second: T_Fou_45
+  - first:
+      213: -4904699958234691348
+    second: T_Fou_46
+  - first:
+      213: -3080280512523938582
+    second: T_Fou_47
+  - first:
+      213: 8646061750770253060
+    second: T_Fou_48
+  - first:
+      213: 1720094783345502276
+    second: T_Fou_49
+  - first:
+      213: -9009351609959918167
+    second: T_Fou_50
+  - first:
+      213: 3064605137870812816
+    second: T_Fou_51
+  - first:
+      213: -598982408864113018
+    second: T_Fou_52
+  - first:
+      213: -1674190855548596744
+    second: T_Fou_53
+  - first:
+      213: -7445153274699588961
+    second: T_Fou_54
+  - first:
+      213: -5509256810284510668
+    second: T_Fou_55
+  - first:
+      213: 8127312841295735900
+    second: T_Fou_56
+  - first:
+      213: -7498944839560438454
+    second: T_Fou_57
+  - first:
+      213: 5522660167143485161
+    second: T_Fou_58
+  - first:
+      213: -5795319058787500835
+    second: T_Fou_59
+  - first:
+      213: -532625918031209884
+    second: T_Fou_60
+  - first:
+      213: -6706409286084875246
+    second: T_Fou_61
+  - first:
+      213: 6909907170914847747
+    second: T_Fou_62
+  - first:
+      213: 1382871661284318790
+    second: T_Fou_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T_Fou_0
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 2791
+        width: 17
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5a2cd15e536fa90800000000000000
+      internalID: -7280572489434749486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_1
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 2801
+        width: 25
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 461511f8dd6a81d70800000000000000
+      internalID: 9014138124700307812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_2
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 2740
+        width: 17
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae3eaca076c5a0e0800000000000000
+      internalID: -2259181450820698453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_3
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 2845
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a626ccc181bd11430800000000000000
+      internalID: 3752020861185188458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_4
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 2790
+        width: 18
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5833e74aac419bd0800000000000000
+      internalID: -2625232813546063777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_5
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 2812
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3b4ce292e4eca60800000000000000
+      internalID: 7696174752008025045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_6
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 2830
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e258f818bfe0ba70800000000000000
+      internalID: 8840829642500231907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_7
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 2775
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 450a7afd879e461c0800000000000000
+      internalID: -4511224221360742316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_8
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 2801
+        width: 6
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a923d6823614070800000000000000
+      internalID: 8088855431015996052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_9
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 2804
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4928b24769a273070800000000000000
+      internalID: 8085978481649484436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_10
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 2785
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e150f3a14658f5330800000000000000
+      internalID: 3701824083705398558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_11
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 2775
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f26f21930c09eb0f0800000000000000
+      internalID: -1099282103766157777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_12
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 2775
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b118320ee839710800000000000000
+      internalID: 1698858577768291162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_13
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 2753
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7763f1f40914f7c0800000000000000
+      internalID: -4038575456814667906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_14
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 2744
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b78dff8466b11e0800000000000000
+      internalID: -2226073127088522480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_15
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 2740
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c7dbdfacab9f340800000000000000
+      internalID: 4898151450745339036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_16
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 2759
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 942497e823a567400800000000000000
+      internalID: 321543596588745289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2708
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe8f32a5d43b07c0800000000000000
+      internalID: -4104128543263322438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_18
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 2661
+        width: 41
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92698f9e06e1fcc00800000000000000
+      internalID: 922989850225317417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_19
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 2667
+        width: 14
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67017f68eed2d7b0800000000000000
+      internalID: -5200849529776044177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_20
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 2578
+        width: 34
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b30ceff1119f2770800000000000000
+      internalID: 8588242520912954288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_21
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 2643
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dac2d25c7648f7750800000000000000
+      internalID: 6304903584566553773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_22
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 2632
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ab0903f1086d880800000000000000
+      internalID: -8586534768088139125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_23
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 2642
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8047fcf05f34a7a20800000000000000
+      internalID: 3060833616562975752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_24
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 2567
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5491b5c50e93c4790800000000000000
+      internalID: -7544591639967491771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_25
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2613
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a3623f63e15b930800000000000000
+      internalID: 4158263052302957094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_26
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 2606
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65dd932cd55c02970800000000000000
+      internalID: 8728193084325223766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_27
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 2590
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0777b0f80a8483290800000000000000
+      internalID: -7910492891044415632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_28
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 2613
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0745f3eaa4ad04160800000000000000
+      internalID: 7007841034474312816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_29
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 2588
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e6aeddeb4157dbe0800000000000000
+      internalID: -1452602968248506651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_30
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 2596
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd83cd35265dde5c0800000000000000
+      internalID: -4184453860466870053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_31
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 2601
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c59ae28f2bf13f0800000000000000
+      internalID: -927826219210548117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_32
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 2581
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d9b408f4b65d180800000000000000
+      internalID: -9091242283578450552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_33
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 185
+        width: 1321
+        height: 2399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f294a61945e4980800000000000000
+      internalID: -8552805658799820930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_34
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 2574
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4be233fa3631f20800000000000000
+      internalID: 3392164548469241067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_35
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2574
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6dd9d571006a99a0800000000000000
+      internalID: -6225557975497843347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_36
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 2575
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054ad2d51da8b0530800000000000000
+      internalID: 3822301340570068048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_37
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 2493
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235a06f37aa4d03e0800000000000000
+      internalID: -2085928970219379406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_38
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 2505
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 605d1bf7055fcf190800000000000000
+      internalID: -7927191517990365946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_39
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 2470
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a543961075d72d6a0800000000000000
+      internalID: -6425935905664977830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_40
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 2193
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cebe6310b3e1a800800000000000000
+      internalID: 622028568933613250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_41
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 2136
+        width: 25
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2858c2547aaa51770800000000000000
+      internalID: 8580952300421154178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_42
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 2115
+        width: 13
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24183eec547464050800000000000000
+      internalID: 5784389136553312578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_43
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 2163
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8572af27a0fb07ac0800000000000000
+      internalID: -3859374829056940200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_44
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 2124
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d41b8a152be69ce00800000000000000
+      internalID: 1065504499003076941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_45
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 2063
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af8a611278c85aa0800000000000000
+      internalID: -6171962897067241568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_46
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 2073
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce84c8bcf510febb0800000000000000
+      internalID: -4904699958234691348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_47
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2013
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae4d372a135a045d0800000000000000
+      internalID: -3080280512523938582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_48
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1988
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40db0c08a5bfcf770800000000000000
+      internalID: 8646061750770253060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_49
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 1527
+        width: 35
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448af4d87110fd710800000000000000
+      internalID: 1720094783345502276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_50
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1518
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5debfb17a58f280800000000000000
+      internalID: -9009351609959918167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_51
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1219
+        width: 21
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09670abc22aa78a20800000000000000
+      internalID: 3064605137870812816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_52
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1165
+        width: 50
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e52f43cacffa7f0800000000000000
+      internalID: -598982408864113018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_53
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1099
+        width: 37
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd81d0894414c8e0800000000000000
+      internalID: -1674190855548596744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_54
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1095
+        width: 12
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ad133fa808da890800000000000000
+      internalID: -7445153274699588961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_55
+      rect:
+        serializedVersion: 2
+        x: 2022
+        y: 1015
+        width: 9
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 432179ece103b83b0800000000000000
+      internalID: -5509256810284510668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_56
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 1008
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c27e308f30ac070800000000000000
+      internalID: 8127312841295735900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_57
+      rect:
+        serializedVersion: 2
+        x: 2022
+        y: 991
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d50c746656ee790800000000000000
+      internalID: -7498944839560438454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_58
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 784
+        width: 40
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee69c5692e64ac40800000000000000
+      internalID: 5522660167143485161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_59
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 990
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc7bec5504e29fa0800000000000000
+      internalID: -5795319058787500835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_60
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 736
+        width: 64
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a559dac8bbb98f0800000000000000
+      internalID: -532625918031209884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ca780594c0ee2a0800000000000000
+      internalID: -6706409286084875246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_62
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 137
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ccd4136fbe4ef50800000000000000
+      internalID: 6909907170914847747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Fou_63
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 134
+        width: 48
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e5eccf272f03310800000000000000
+      internalID: 1382871661284318790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      T_Fou_0: -7280572489434749486
+      T_Fou_1: 9014138124700307812
+      T_Fou_10: 3701824083705398558
+      T_Fou_11: -1099282103766157777
+      T_Fou_12: 1698858577768291162
+      T_Fou_13: -4038575456814667906
+      T_Fou_14: -2226073127088522480
+      T_Fou_15: 4898151450745339036
+      T_Fou_16: 321543596588745289
+      T_Fou_17: -4104128543263322438
+      T_Fou_18: 922989850225317417
+      T_Fou_19: -5200849529776044177
+      T_Fou_2: -2259181450820698453
+      T_Fou_20: 8588242520912954288
+      T_Fou_21: 6304903584566553773
+      T_Fou_22: -8586534768088139125
+      T_Fou_23: 3060833616562975752
+      T_Fou_24: -7544591639967491771
+      T_Fou_25: 4158263052302957094
+      T_Fou_26: 8728193084325223766
+      T_Fou_27: -7910492891044415632
+      T_Fou_28: 7007841034474312816
+      T_Fou_29: -1452602968248506651
+      T_Fou_3: 3752020861185188458
+      T_Fou_30: -4184453860466870053
+      T_Fou_31: -927826219210548117
+      T_Fou_32: -9091242283578450552
+      T_Fou_33: -8552805658799820930
+      T_Fou_34: 3392164548469241067
+      T_Fou_35: -6225557975497843347
+      T_Fou_36: 3822301340570068048
+      T_Fou_37: -2085928970219379406
+      T_Fou_38: -7927191517990365946
+      T_Fou_39: -6425935905664977830
+      T_Fou_4: -2625232813546063777
+      T_Fou_40: 622028568933613250
+      T_Fou_41: 8580952300421154178
+      T_Fou_42: 5784389136553312578
+      T_Fou_43: -3859374829056940200
+      T_Fou_44: 1065504499003076941
+      T_Fou_45: -6171962897067241568
+      T_Fou_46: -4904699958234691348
+      T_Fou_47: -3080280512523938582
+      T_Fou_48: 8646061750770253060
+      T_Fou_49: 1720094783345502276
+      T_Fou_5: 7696174752008025045
+      T_Fou_50: -9009351609959918167
+      T_Fou_51: 3064605137870812816
+      T_Fou_52: -598982408864113018
+      T_Fou_53: -1674190855548596744
+      T_Fou_54: -7445153274699588961
+      T_Fou_55: -5509256810284510668
+      T_Fou_56: 8127312841295735900
+      T_Fou_57: -7498944839560438454
+      T_Fou_58: 5522660167143485161
+      T_Fou_59: -5795319058787500835
+      T_Fou_6: 8840829642500231907
+      T_Fou_60: -532625918031209884
+      T_Fou_61: -6706409286084875246
+      T_Fou_62: 6909907170914847747
+      T_Fou_63: 1382871661284318790
+      T_Fou_7: -4511224221360742316
+      T_Fou_8: 8088855431015996052
+      T_Fou_9: 8085978481649484436
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
