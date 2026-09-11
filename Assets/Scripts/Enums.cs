@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public enum CARD_TYPE
 {
     NONE = 0,
