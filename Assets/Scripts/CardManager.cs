@@ -102,7 +102,7 @@ public class CardManager : MonoBehaviour
     public async void CreateDeck()
     {
         ClearDeck();
-        CardGame.Instance?.ResetMultiplicators();
+        GameManager.Instance?.ResetMultiplicators();
 
         await Awaitable.NextFrameAsync();
         await Awaitable.NextFrameAsync();
