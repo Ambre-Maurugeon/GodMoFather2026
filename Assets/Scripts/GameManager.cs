@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     private bool isGameOn = false;
+    public bool isMiniGameOn = false;
     private int _monsterAngryMeter = 0;
     [SerializeField] private DodgeGame dodgeGame;
     [SerializeField] private MonsterAngryMeter monsterAngryMeter;

@@ -10,6 +10,7 @@ public class CardController : MonoBehaviour, IPointerClickHandler
     private bool _isSelected = false;
     private bool _ignoreSelection = false;
     [SerializeField] private Image _img;
+    public Image img => _img;
 
 
     public void UpdateCardInfo(CardData data)

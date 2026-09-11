@@ -243,7 +243,6 @@ public class CardGame : MonoBehaviour
         if (hand.Count >= 2)
         {
             CardManager.Instance.CanInteract = false;
-            controller.IgnoreSelection();
             Invoke("PlayCards", 0.5f);
         }
     }
@@ -273,6 +272,11 @@ public class CardGame : MonoBehaviour
 
         // Combo Count
         Combo();
+    }
+
+    public void HidePreviousCard(bool hide)
+    {
+        _previousCard.gameObject.SetActive(!hide);
     }
 
     [Button]
