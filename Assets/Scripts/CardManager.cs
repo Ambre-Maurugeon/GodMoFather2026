@@ -49,12 +49,14 @@ public class CardManager : MonoBehaviour
         else
             _instance = this;
 
+
+        // Sort Cards at init
+        SortCardsByType();
+
     }
 
     private void Start()
     {
-        // Sort Cards at init
-        SortCardsByType();
 
         CanInteract = true;
     }
@@ -97,15 +99,21 @@ public class CardManager : MonoBehaviour
     }
 
     [Button]
-    public void CreateDeck()
+    public async void CreateDeck()
     {
         ClearDeck();
+
+        await Awaitable.NextFrameAsync();
+        await Awaitable.NextFrameAsync();
+        await Awaitable.NextFrameAsync();
+        await Awaitable.NextFrameAsync();
+        await Awaitable.NextFrameAsync();
 
         // -- FILL DECK --
         for (int i = 0; i < _deckCount; i++)
         {
             // -- GET RD --
-            CardData rdCard = GetRandomCard();
+                CardData rdCard = GetRandomCard();
 
             // -- ADD RD --
             _deck.Add(rdCard);
