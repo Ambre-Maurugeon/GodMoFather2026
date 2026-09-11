@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,7 +19,23 @@ public class GameManager : MonoBehaviour
     [Header("SCORE")]
     private int _player1Score = 0;
     private int _player2Score = 0;
+<<<<<<< Updated upstream
     private bool _isPlayer1Turn = false;
+=======
+    private int _player1Multiplier = 1;
+    private int _player2Multiplier = 1;
+    private bool _isPlayer1Turn
+    {
+        get { return testJ1; }
+        set
+        {
+            testJ1 = value;
+            Debug.Log($"is player turn {testJ1} ");
+        }
+    }
+
+    private bool testJ1 = false;
+>>>>>>> Stashed changes
     private bool _isPlayer2Turn = false;
     [SerializeField] private int _scoreGoal = 1000; //1k
 
@@ -27,6 +44,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI player1ScoreText;
     [SerializeField] private TextMeshProUGUI player2ScoreText;
     [SerializeField] private TextMeshProUGUI scoreGoalText;
+    [SerializeField] private TextMeshProUGUI player1MultiText;
+    [SerializeField] private TextMeshProUGUI player2MultiText;
     [SerializeField] private TextMeshProUGUI angryMeterText;
     [SerializeField] private TextMeshProUGUI diceResultText;
     [Header("Colors")]
@@ -94,13 +113,27 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int score)
     {
         if (_isPlayer1Turn)
-            _player1Score += score;
+            _player1Score += score * _player1Multiplier;
         else if (_isPlayer2Turn)
-            _player2Score += score;
+            _player2Score += score * _player2Multiplier;
 
         if (score != 0)
             AudioManager.Instance.PlaySFX(SoundType.PointsPerdus);
         UpdateText();
+    }
+
+    public void UpdateMultiplier(int multiplier)
+    {
+        if (_isPlayer1Turn)
+        {
+            _player1Multiplier += multiplier;
+            player1MultiText.text = "x" +  _player1Multiplier.ToString();
+        }
+        else if (_isPlayer2Turn)
+        {
+            _player2Multiplier += multiplier;
+            player2MultiText.text = "x" +  _player2Multiplier.ToString();
+        }
     }
 
     public void PlayTurn()
@@ -230,6 +263,7 @@ public class GameManager : MonoBehaviour
             currentTurnText.text = "Player 2's turn";
         }
     }
+<<<<<<< Updated upstream
     public int WhosTurn()
     {
         if (_isPlayer1Turn && !_isPlayer2Turn)
@@ -238,5 +272,12 @@ public class GameManager : MonoBehaviour
             return 2;
         else
             return 0;
+=======
+
+    public void ResetMultiplicators()
+    {
+        _player1Multiplier = 1;
+        _player2Multiplier = 1;
+>>>>>>> Stashed changes
     }
 }

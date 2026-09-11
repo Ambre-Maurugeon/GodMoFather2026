@@ -47,11 +47,11 @@ public class CardGame : MonoBehaviour
     //[SerializeField] private TextMeshProUGUI _textScoreJ1;
     //[SerializeField] private TextMeshProUGUI _textScoreJ2;
 
-    [Space(10)]
-    [SerializeField] private TextMeshProUGUI _textMultiplicateurJ1;
-    [SerializeField] private TextMeshProUGUI _textMultiplicateurJ2;
-    private int _multiplicatorJ1 = 1;
-    private int _multiplicatorJ2 = 1;
+    //[Space(10)]
+    //[SerializeField] private TextMeshProUGUI _textMultiplicateurJ1;
+    //[SerializeField] private TextMeshProUGUI _textMultiplicateurJ2;
+    //private int _multiplicatorJ1 = 1;
+    //private int _multiplicatorJ2 = 1;
 
     // ---- COMBO ----
     [Header("Combos")]
@@ -90,14 +90,16 @@ public class CardGame : MonoBehaviour
             if (_arena[0].MyData.CardType == CARD_TYPE.OUDLER)
             {
                 Debug.Log("oudler on first card");
-                _multiplicatorJ1 = _arena[0].MyData.CardNumber;
-                _textMultiplicateurJ1.text = _multiplicatorJ1.ToString();
+                GameManager.Instance?.UpdateMultiplier(_arena[0].MyData.CardNumber);
+                //_multiplicatorJ1 = _arena[0].MyData.CardNumber;
+                //_textMultiplicateurJ1.text = _multiplicatorJ1.ToString();
             }
             else
             {
                 Debug.Log("oudler on second card");
-                _multiplicatorJ1 = _arena[1].MyData.CardNumber;
-                _textMultiplicateurJ2.text = _multiplicatorJ2.ToString();
+                GameManager.Instance?.UpdateMultiplier(_arena[1].MyData.CardNumber);
+                //_multiplicatorJ1 = _arena[1].MyData.CardNumber;
+                //_textMultiplicateurJ2.text = _multiplicatorJ2.ToString();
             }
         }
         // multiplicateur agit d�s sa main ou sur les prochains tours ? stop ici ou pas
@@ -114,19 +116,19 @@ public class CardGame : MonoBehaviour
 
         //none
         if (cardNumber01 <= 10 && cardNumber02 <= 10)
-            tempoScore += _basicCombo * _multiplicatorJ1 * _globalCoeff;
+            tempoScore += _basicCombo * _globalCoeff;
         // king
         else if (cardNumbers.Contains(50))
-            tempoScore += _kingCombo * _multiplicatorJ1 * _globalCoeff;
+            tempoScore += _kingCombo * _globalCoeff;
         // queen
         else if (cardNumbers.Contains(40))
-            tempoScore += _queenCombo * _multiplicatorJ1 * _globalCoeff;
+            tempoScore += _queenCombo * _globalCoeff;
         //knight
         else if (cardNumbers.Contains(30))
-            tempoScore += _knightCombo * _multiplicatorJ1 * _globalCoeff;
+            tempoScore += _knightCombo * _globalCoeff;
         //jack
         else if (cardNumbers.Contains(20))
-            tempoScore += _jackCombo * _multiplicatorJ1 * _globalCoeff;
+            tempoScore += _jackCombo * _globalCoeff;
 
         GameManager.Instance?.UpdateScore(tempoScore);
 
@@ -298,11 +300,6 @@ public class CardGame : MonoBehaviour
         hand.Clear();
     }
 
-    public void ResetMultiplicators()
-    {
-        _multiplicatorJ1 = 1;
-        _multiplicatorJ2 = 1;
-    }
 
 
 }
