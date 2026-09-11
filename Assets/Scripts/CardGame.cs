@@ -243,6 +243,7 @@ public class CardGame : MonoBehaviour
         if (hand.Count >= 2)
         {
             CardManager.Instance.CanInteract = false;
+            controller.IgnoreSelection();
             Invoke("PlayCards", 0.5f);
         }
     }
