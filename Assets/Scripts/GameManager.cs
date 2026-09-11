@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
         CardManager.Instance?.CreateDeck();
         StartCoroutine("StartGame");
-        AudioManager.Instance.PlayMusic(SoundType.MainTheme);
+        AudioManager.Instance?.PlayMusic(SoundType.MainTheme);
     }
 
     IEnumerator StartGame()

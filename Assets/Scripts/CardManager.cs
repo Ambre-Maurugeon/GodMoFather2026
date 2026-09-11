@@ -125,7 +125,7 @@ public class CardManager : MonoBehaviour
 
             controller.UpdateCardInfo(rdCard);
 
-            AudioManager.Instance.PlaySFX(SoundType.AudioCardDraw);
+            AudioManager.Instance?.PlaySFX(SoundType.AudioCardDraw);
         }
     }
 

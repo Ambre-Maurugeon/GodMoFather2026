@@ -8,14 +8,7 @@ public class CardController : MonoBehaviour, IPointerClickHandler
     public CardData MyData => _myData;
 
     private bool _isSelected = false;
-
-    // -- Components --
-    private Image _img;
-
-    private void Awake()
-    {
-        _img = GetComponent<Image>();
-    }
+    [SerializeField] private Image _img;
 
 
     public void UpdateCardInfo(CardData data)
